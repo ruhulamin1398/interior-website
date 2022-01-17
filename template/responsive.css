@@ -19,7 +19,7 @@
 
 /* @media screen and (min-width: 1400px){
     .dropdown:hover .dropdown-menu{
-        display: block;
+        displayservice
     }
 } */
 
@@ -66,26 +66,26 @@
 }
 
 @media screen and (max-width: 760px) {
-    .building-row-img {
+    .service-row-img {
         height: 500px;
         width: 560px;
     }
 
-    .building-row-text {
+    .service-row-text{
         height: 320px;
         width: 580px;
     }
 
-    .building-row-text h2 {
+    .service-row-text h2 {
         font-size: 2rem;
         padding: 1.4rem 1.4rem 0 1.4rem;
     }
 
-    .building-row-text h2::first-letter {
+    .service-row-text h2::first-letter {
         font-size: 2.4rem;
     }
 
-    .building-row-text p {
+    .service-row-text p {
         padding: 0.6rem 1.4rem 0 1.4rem;
     }
 }
@@ -118,17 +118,17 @@
 }
 
 @media screen and (max-width: 620px) {
-    .building-row-img {
+    .service-row-img {
         height: 400px;
         width: 460px;
     }
 
-    .building-row-text {
+    .service-row-text {
         height: 320px;
         width: 480px;
     }
 
-    .building-row-text p {
+    .service-row-text p {
         font-size: 1rem;
     }
 
@@ -151,26 +151,26 @@
         font-size: 2.2rem;
     }
 
-    .building-row-img {
+    .service-row-img {
         height: 360px;
         width: 400px;
     }
 
-    .building-row-text {
+    .service-row-text {
         height: 300px;
         width: 400px;
     }
 
-    .building-row-text h2 {
+    .service-row-text h2 {
         font-size: 1.4rem;
         padding: 1rem 1rem 0 1rem;
     }
 
-    .building-row-text h2::first-letter {
+    .service-row-text h2::first-letter {
         font-size: 1.8rem;
     }
 
-    .building-row-text p {
+    .service-row-text p {
         padding: 0.4rem 1rem 0 1rem;
     }
 
@@ -197,22 +197,22 @@
 }
 
 @media screen and (max-width: 440px) {
-    .building-row-img {
+    .service-row-img {
         height: 360px;
         width: 360px;
     }
 
-    .building-row-text {
+    .service-row-text {
         height: 360px;
         width: 360px;
     }
 
-    .building-row-text h2 {
+    .service-row-text h2 {
         font-size: 1.4rem;
         padding: 2rem 1rem 0 1rem;
     }
 
-    .building-row-text p {
+    .service-row-text p {
         padding: 0.4rem 1rem 0 1rem;
     }
 
@@ -277,26 +277,26 @@
         font-weight: bold;
     }
 
-    .building-row-img {
+    .service-row-img {
         height: 340px;
         width: 100%;
     }
 
-    .building-row-text {
+    .service-row-text {
         height: auto;
         width: 90%;
     }
 
-    .building-row-text h2 {
+    .service-row-text h2 {
         font-size: 1.4rem;
         padding: 2rem 1rem 0 1rem;
     }
 
-    .building-row-text p {
+    .service-row-text p {
         padding: 0.4rem 1rem 0 1rem;
     }
 
-    .building-row-text .learn-more-btn {
+    .service-row-text .learn-more-btn {
         padding-bottom: 1.6rem;
     }
 

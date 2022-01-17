@@ -5,6 +5,8 @@ let header = document.querySelector('.header');
 let carousel = document.querySelector('.carousel');
 let breadCrumb = document.querySelector('.breadcrumb-area');
 
+let parallax = document.querySelector('.parallax');
+
 window.onscroll = () => {
     let scrollTop = document.documentElement.scrollTop;
 
@@ -63,7 +65,7 @@ for (let i = 0; i < filterMenu.length; i++) {
 // selecting lightbox elements
 let lightBox = document.querySelector('.lightbox');
 let closeBtn = document.querySelector('.lightbox-close-btn');
-let imgCategory = document.querySelector('#image-category');
+// let imgCategory = document.querySelector('#image-category');
 let lightBoxImage = document.querySelector('.image-wrapper img');
 let lightBoxShadow = document.querySelector('.lightbox-shadow');
 let controlScrolling = document.querySelector('body');
@@ -84,10 +86,10 @@ for (let i = 0; i < filterContents.length; i++) {
     // lightbox show, slide, close
     filterContents[i].addEventListener('click', () => {
         console.log('clicked' + i);
-        let getCategory = filterContents[i].getAttribute('data-item');
+        // let getCategory = filterContents[i].getAttribute('data-item');
         let getImg = filterContents[i].querySelector('img').src;
 
-        imgCategory.textContent = getCategory;
+        // imgCategory.textContent = getCategory;
         lightBoxImage.src = getImg;
 
         lightBox.classList.add('show-lightbox');
@@ -102,10 +104,10 @@ for (let i = 0; i < filterContents.length; i++) {
                 slideLeft = filterContents.length - 1;
             }
 
-            getCategory = filterContents[slideLeft].getAttribute('data-item');
+            // getCategory = filterContents[slideLeft].getAttribute('data-item');
             getImg = filterContents[slideLeft].querySelector('img').src;
 
-            imgCategory.textContent = getCategory;
+            // imgCategory.textContent = getCategory;
             lightBoxImage.src = getImg;
 
             slideLeft--;
@@ -120,10 +122,10 @@ for (let i = 0; i < filterContents.length; i++) {
                 slideRight = 0;
             }
 
-            getCategory = filterContents[slideRight].getAttribute('data-item');
+            // getCategory = filterContents[slideRight].getAttribute('data-item');
             getImg = filterContents[slideRight].querySelector('img').src;
 
-            imgCategory.textContent = getCategory;
+            // imgCategory.textContent = getCategory;
             lightBoxImage.src = getImg;
 
             slideRight++;
