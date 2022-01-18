@@ -1,6 +1,7 @@
 // aos animation
 AOS.init();
 
+// navbar animation
 let header = document.querySelector('.header');
 let carousel = document.querySelector('.carousel');
 let breadCrumb = document.querySelector('.breadcrumb-area');
@@ -31,18 +32,22 @@ window.onscroll = () => {
 let filterMenu = document.querySelectorAll('.filter-menu li');
 let filterContents = document.querySelectorAll('.filter-content');
 
+// delete construction projects
 for (let i = 0; i < filterContents.length; i++) {
     if (filterContents[i].getAttribute('data-item') === 'construction') {
         filterContents[i].classList.add('deleteContents');
     }
 }
 
+// filter construction and interior projects
 for (let i = 0; i < filterMenu.length; i++) {
     filterMenu[i].addEventListener('click', () => {
+        // delete active menu
         for (let j = 0; j < filterMenu.length; j++) {
             filterMenu[j].classList.remove('active-menu');
         }
 
+        // select active menu
         filterMenu[i].classList.add('active-menu');
         let attrValue = filterMenu[i].getAttribute('data-list');
 
@@ -51,7 +56,7 @@ for (let i = 0; i < filterMenu.length; i++) {
             filterContents[k].classList.add('deleteContents');
             filterContents[k].classList.remove('activeContents');
 
-            // filter contents: display filter contents or display all contents (if attr is 'all')
+            // display filter contents
             if (filterContents[k].getAttribute('data-item') === attrValue) {
                 filterContents[k].classList.add('activeContents');
                 filterContents[k].classList.remove('deleteContents');
@@ -63,7 +68,6 @@ for (let i = 0; i < filterMenu.length; i++) {
 // selecting lightbox elements
 let lightBox = document.querySelector('.lightbox');
 let closeBtn = document.querySelector('.lightbox-close-btn');
-// let imgCategory = document.querySelector('#image-category');
 let lightBoxImage = document.querySelector('.image-wrapper img');
 let lightBoxShadow = document.querySelector('.lightbox-shadow');
 let controlScrolling = document.querySelector('body');
@@ -83,52 +87,81 @@ if (closeBtn !== null) {
 for (let i = 0; i < filterContents.length; i++) {
     // lightbox show, slide, close
     filterContents[i].addEventListener('click', () => {
-        console.log('clicked' + i);
-        // let getCategory = filterContents[i].getAttribute('data-item');
-        let getImg = filterContents[i].querySelector('img').src;
 
-        // imgCategory.textContent = getCategory;
-        lightBoxImage.src = getImg;
+        if (lightBox !== null) {
+            let getImg = filterContents[i].querySelector('img').src;
 
-        lightBox.classList.add('show-lightbox');
-        lightBoxShadow.classList.add('show-shadow');
-        controlScrolling.style.overflow = 'hidden';
+            lightBoxImage.src = getImg;
 
-        let slideLeft = i - 1;
+            // show lightbox
+            lightBox.classList.add('show-lightbox');
+            lightBoxShadow.classList.add('show-shadow');
+            controlScrolling.style.overflow = 'hidden';
+        } else {
+            // go to project page
+            window.location = "project.html";
+        }
+
+        // slide image
+        function slideImage(index) {
+            // getCategory = filterContents[index].getAttribute('data-item');
+            getImg = filterContents[index].querySelector('img').src;
+
+            // imgCategory.textContent = getCategory;
+            lightBoxImage.src = getImg;
+        }
+
+        let leftIndex = i - 1;
 
         // slide left
         leftArrow.onclick = () => {
-            if (slideLeft < 0) {
-                slideLeft = filterContents.length - 1;
+            if (leftIndex < 0) {
+                leftIndex = filterContents.length - 1;
             }
 
-            // getCategory = filterContents[slideLeft].getAttribute('data-item');
-            getImg = filterContents[slideLeft].querySelector('img').src;
+            slideImage(leftIndex);
 
-            // imgCategory.textContent = getCategory;
-            lightBoxImage.src = getImg;
-
-            slideLeft--;
+            leftIndex--;
         }
 
 
-        let slideRight = i + 1;
+        let rightIndex = i + 1;
 
         // slide right
         rightArrow.onclick = () => {
-            if (slideRight >= filterContents.length) {
-                slideRight = 0;
+            if (rightIndex >= filterContents.length) {
+                rightIndex = 0;
             }
 
-            // getCategory = filterContents[slideRight].getAttribute('data-item');
-            getImg = filterContents[slideRight].querySelector('img').src;
+            slideImage(rightIndex);
 
-            // imgCategory.textContent = getCategory;
-            lightBoxImage.src = getImg;
-
-            slideRight++;
+            rightIndex++;
         }
 
+        // slide when arrow key down
+        document.onkeydown = (event) => {
+            // slide left
+            if (event.keyCode === 37) {
+                if (leftIndex < 0) {
+                    leftIndex = filterContents.length - 1;
+                }
+
+                slideImage(leftIndex);
+
+                leftIndex--;
+            }
+
+            // slide right
+            if (event.keyCode === 39) {
+                if (rightIndex >= filterContents.length) {
+                    rightIndex = 0;
+                }
+
+                slideImage(rightIndex);
+
+                rightIndex++;
+            }
+        }
 
         // close lightbox
         closeBtn.onclick = () => {
@@ -139,11 +172,11 @@ for (let i = 0; i < filterContents.length; i++) {
     });
 }
 
-// Service gallery
-
+// service gallery
 let galleryContent = document.querySelectorAll('.service-gallery-content');
 
 for (let i = 0; i < galleryContent.length; i++) {
+    // when onclick then go to project page
     galleryContent[i].onclick = () => {
         window.location = "project.html";
     }
