@@ -5,8 +5,6 @@ let header = document.querySelector('.header');
 let carousel = document.querySelector('.carousel');
 let breadCrumb = document.querySelector('.breadcrumb-area');
 
-let parallax = document.querySelector('.parallax');
-
 window.onscroll = () => {
     let scrollTop = document.documentElement.scrollTop;
 

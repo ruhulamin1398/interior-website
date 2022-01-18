@@ -345,7 +345,7 @@ a:active{
 
 
 
-/* Building Row
+/* Service Row
 ----------------------- */
 .service-row {
     position: relative;
@@ -763,21 +763,25 @@ a:active{
 /* Breadcrumb 
 ----------------- */
 .breadcrumb-area {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('./img/interior_gallery/commercial_02.jpeg');
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('./img/breadcumb-02.jpg');
+    height: 11rem;
+    width: 100%;
+    box-sizing: border-box;
     background-size: cover;
     background-attachment: fixed;
     border-bottom: 1px solid #ddd;
 }
 
 .breadcrumb-area .container-lg {
-    padding: 4rem 0;
     display: flex;
+    height: 100%;
     width: 100%;
     justify-content: space-between;
     align-items: center;
 }
 
 .breadcrumb-area .title h2 {
+    margin-bottom: 0;
     color: #fff;
     font-size: 2rem;
     font-weight: 500;
