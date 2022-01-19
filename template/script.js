@@ -75,15 +75,6 @@ let controlScrolling = document.querySelector('body');
 let leftArrow = document.querySelector('#left-arrow');
 let rightArrow = document.querySelector('#right-arrow');
 
-// close lightbox for home page gallery
-if (closeBtn !== null) {
-    closeBtn.onclick = () => {
-        lightBox.classList.remove('show-lightbox');
-        lightBoxShadow.classList.remove('show-shadow');
-        controlScrolling.style.overflow = 'auto';
-    }
-}
-
 for (let i = 0; i < filterContents.length; i++) {
     // lightbox show, slide, close
     filterContents[i].addEventListener('click', () => {
