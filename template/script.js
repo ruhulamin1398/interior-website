@@ -70,8 +70,11 @@ let lightBox = document.querySelector('.lightbox');
 let closeBtn = document.querySelector('.lightbox-close-btn');
 let lightBoxImage = document.querySelector('.image-wrapper img');
 let lightBoxShadow = document.querySelector('.lightbox-shadow');
-let controlScrolling = document.querySelector('body');
+let controlScrolling = document.querySelector('html');
 
+console.log(controlScrolling);
+
+let lightBoxArrow = document.querySelector('.lightbox-arrow');
 let leftArrow = document.querySelector('#left-arrow');
 let rightArrow = document.querySelector('#right-arrow');
 
@@ -88,6 +91,7 @@ for (let i = 0; i < filterContents.length; i++) {
             lightBox.classList.add('show-lightbox');
             lightBoxShadow.classList.add('show-shadow');
             controlScrolling.style.overflow = 'hidden';
+            lightBoxArrow.classList.add('show-lightbox-arrow');
         } else {
             // go to project page
             window.location = "project.html";
@@ -158,6 +162,7 @@ for (let i = 0; i < filterContents.length; i++) {
         closeBtn.onclick = () => {
             lightBox.classList.remove('show-lightbox');
             lightBoxShadow.classList.remove('show-shadow');
+            lightBoxArrow.classList.remove('show-lightbox-arrow');
             controlScrolling.style.overflow = 'auto';
         }
     });

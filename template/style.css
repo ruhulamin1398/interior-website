@@ -1121,31 +1121,36 @@ a:active {
 }
 
 .lightbox-arrow {
-    position: absolute;
+    position: fixed;
     top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 999999999;
+}
+
+.lightbox-arrow.show-lightbox-arrow{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .lightbox-arrow span {
-    position: absolute;
     font-size: 4rem;
-    color: gray;
+    color: #aaa;
     cursor: pointer;
 }
 
 #left-arrow {
-    -webkit-transform: translateX(-2000%);
-    -ms-transform: translateX(-2000%);
-    transform: translateX(-2000%);
+   margin-left: 4%;
 }
 
 #right-arrow {
-    -webkit-transform: translateX(2000%);
-    -ms-transform: translateX(2000%);
-    transform: translateX(2000%);
+    margin-right: 4%;
 }
 
 
