@@ -72,8 +72,6 @@ let lightBoxImage = document.querySelector('.image-wrapper img');
 let lightBoxShadow = document.querySelector('.lightbox-shadow');
 let controlScrolling = document.querySelector('html');
 
-console.log(controlScrolling);
-
 let lightBoxArrow = document.querySelector('.lightbox-arrow');
 let leftArrow = document.querySelector('#left-arrow');
 let rightArrow = document.querySelector('#right-arrow');
