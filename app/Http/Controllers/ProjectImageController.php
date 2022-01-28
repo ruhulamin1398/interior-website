@@ -62,11 +62,9 @@ class ProjectImageController extends Controller
                 $projectImage->project_id = $request->projectid;
                 $projectImage->save();
 
-                
-           
-        }
+                  }
 
-return redirect()->route('project-image.index')->with('success','Images Uploaded Successfully');
+        return back()->with('success','Images Uploaded Successfully');
   
     }
 
@@ -113,6 +111,6 @@ return redirect()->route('project-image.index')->with('success','Images Uploaded
     public function destroy($id)
     {
         ProjectImage::find($id)->delete();
-        return redirect()->route('project-image.index')->with('success','Deleted Succesfully');
+        return back()->with('success','Deleted Succesfully');
     }
 }

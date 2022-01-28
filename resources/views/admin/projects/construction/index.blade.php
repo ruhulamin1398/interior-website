@@ -56,9 +56,8 @@
                         </td>
 
                        <td class="nk-tb-col tb-col-md">
-                            <a href="{{route('project-construction-image.index')}}?constructionid={{$details->id}}&title={{$details->title}}" class="btn btn-trigger btn-icon" data-toggle="tooltip" data-placement="top" title="Upload Image">
-
-                            <em class="icon ni ni-img"></em>Manage Image
+                            <a href="{{route('project-construction-image.index')}}?constructionid={{$details->id}}&title={{$details->title}}"  data-toggle="tooltip" data-placement="top" title="Upload Image">
+                             <span class="badge badge-md badge-outline-gray"> {{count($details->images)}} Images</span> 
                             </a>
                         </td>
 

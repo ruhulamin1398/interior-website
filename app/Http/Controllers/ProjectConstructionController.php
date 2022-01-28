@@ -16,6 +16,7 @@ class ProjectConstructionController extends Controller
     public function index()
     {
         $detail = Project::where('category_id', '2')->get();
+        // return Project::find(28)->subCat;
 
          return view('admin.projects.construction.index', compact('detail'));
     }

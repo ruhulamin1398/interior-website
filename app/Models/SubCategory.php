@@ -13,7 +13,10 @@ class SubCategory extends Model
         'title',
         'image',
     ];
-    
+    public function subCat()
+    {
+     return $this->hasMany(Project::class,'subcategory_id');
+    }
    
 }
 

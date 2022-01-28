@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ConstructionController;
+use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\InteriorController;
 use App\Http\Controllers\ManageUserController;
 use App\Http\Controllers\ProjectConstructionController;
 use App\Http\Controllers\ProjectConstructionImageController;
@@ -22,13 +26,26 @@ use Spatie\Permission\Models\Role;
 |
 */
 
+//  ******** FRONTEND ROUTES ************
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.index');
 });
 
+Route::get('/about-us',[AboutController::class,'index'])->name('about-us');
+Route::get('/interior-service',[InteriorController::class,'index'])->name('front-interior');
+Route::get('/construction-service',[ConstructionController::class,'index'])->name('front-cons');
+Route::get('/contact-us',[ContactUsController::class,'index'])->name('contact-us');
+Route::view('/quote','frontend.pages.quote')->name('quote');
+
+
+
+
+
+
+//  ******** BACKEND ROUTES ************
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () 
 {
-    // ASSIGNNG A ROLE IF NOT EXISTS
+    // ASSINING A ROLE IF NOT EXISTS
     $user = Auth::user();
    if( $user->hasAnyRole('super-admin', 'admin')){
     return view('admin.index');
