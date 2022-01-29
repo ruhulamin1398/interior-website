@@ -1,7 +1,7 @@
   <!-- navbar start -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light ">
             <div class="nav-content container-fluid">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{route('home-index')}}">
                     <img loading="lazy" class="d-inline-block align-top" src="{{asset('theme/frontend/img/logo.png')}}" alt="brand-logo">
                 </a>
 
@@ -14,7 +14,7 @@
                 <div class="main-menu collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="">Home</a>
+                            <a class="nav-link active" aria-current="page" href="{{route('home-index')}}">Home</a>
                         </li>
 
                         <li class="nav-item">

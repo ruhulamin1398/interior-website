@@ -29,7 +29,7 @@ use Spatie\Permission\Models\Role;
 //  ******** FRONTEND ROUTES ************
 Route::get('/', function () {
     return view('frontend.index');
-});
+})->name('home-index');
 
 Route::get('/about-us',[AboutController::class,'index'])->name('about-us');
 Route::get('/interior-service',[InteriorController::class,'index'])->name('front-interior');
