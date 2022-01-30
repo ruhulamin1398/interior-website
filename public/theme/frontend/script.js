@@ -35,6 +35,7 @@ window.onscroll = () => {
 // selecting filter menu and filter items
 let filterMenu = document.querySelectorAll('.filter-menu li');
 let filterContents = document.querySelectorAll('.filter-content');
+ 
 
 // delete construction projects
 for (let i = 0; i < filterContents.length; i++) {
@@ -103,7 +104,7 @@ for (let i = 0; i < filterContents.length; i++) {
             controlScrolling.style.overflow = 'hidden';
         } else {
             // go to project page
-            window.location = "project.html";
+            // window.location = "project.html";
         }
 
         // slide image
@@ -177,11 +178,11 @@ for (let i = 0; i < filterContents.length; i++) {
 }
 
 // service gallery
-let galleryContent = document.querySelectorAll('.service-gallery-content');
+// let galleryContent = document.querySelectorAll('.service-gallery-content');
 
-for (let i = 0; i < galleryContent.length; i++) {
+// for (let i = 0; i < galleryContent.length; i++) {
     // when onclick then go to project page
-    galleryContent[i].onclick = () => {
-        window.location = "project.html";
-    }
-}
+//     galleryContent[i].onclick = () => {
+//         window.location = "project.html";
+//     }
+// }

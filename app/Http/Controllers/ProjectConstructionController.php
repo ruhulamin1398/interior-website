@@ -57,6 +57,7 @@ class ProjectConstructionController extends Controller
         $service->title = $request->title;
         $service->short_description = $request->short_description;
         $service->description = $request->long_description;
+        $service->serial = $request->serial;
         $service->subcategory_id = $request->sub_category_id;
         $service->category_id = '2';
         $service->save();
@@ -102,6 +103,7 @@ class ProjectConstructionController extends Controller
         $service->title = $request->title;
         $service->short_description = $request->short_description;
         $service->description = $request->long_description;
+        $service->serial = $request->serial;
         $service->subcategory_id = $request->sub_category_id;
         $service->update();
 

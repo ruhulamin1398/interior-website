@@ -27,6 +27,8 @@
             <table class="datatable-init nowrap nk-tb-list nk-tb-ulist" data-auto-responsive="false">
                 <thead>
                     <tr class="nk-tb-item nk-tb-head">
+                        <th class="nk-tb-col"><span class="sub-text">Serial</span></th>
+
                         <th class="nk-tb-col"><span class="sub-text">Title</span></th>
                         <th class="nk-tb-col tb-col-mb"><span class="sub-text">Service</span></th>
                         <th class="nk-tb-col tb-col-mb"><span class="sub-text">Short Description</th>
@@ -41,7 +43,10 @@
                     @foreach($detail as $details)
 
                     <tr class="nk-tb-item">
-
+                        <td class="nk-tb-col tb-col-mb">
+                            <span class="tb-lead">{{$details->serial }}</span>
+                            
+                        </td>
 
                         <td class="nk-tb-col tb-col-mb">
                             <span class="tb-lead">{{$details->title}} </span>
@@ -50,14 +55,14 @@
                         <td class="nk-tb-col tb-col-md">
                             <span class="tb-lead">{{$details->subcategory_id}}</span>
                         </td>
-                        
+
                         <td class="nk-tb-col tb-col-md">
                             <span class="tb-lead">{{$details->short_description}}</span>
                         </td>
 
-                       <td class="nk-tb-col tb-col-md">
-                            <a href="{{route('project-construction-image.index')}}?constructionid={{$details->id}}&title={{$details->title}}"  data-toggle="tooltip" data-placement="top" title="Upload Image">
-                             <span class="badge badge-md badge-outline-gray"> {{count($details->images)}} Images</span> 
+                        <td class="nk-tb-col tb-col-md">
+                            <a href="{{route('project-construction-image.index')}}?constructionid={{$details->id}}&title={{$details->title}}" data-toggle="tooltip" data-placement="top" title="Upload Image">
+                                <span class="badge badge-md badge-outline-gray"> {{count($details->images)}} Images</span>
                             </a>
                         </td>
 
