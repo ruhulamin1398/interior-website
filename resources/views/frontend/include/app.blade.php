@@ -15,8 +15,8 @@
     <!-- aos cdn link -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-     <!-- font-awesome -->
-     <script src="https://kit.fontawesome.com/73b8d6ae8a.js" crossorigin="anonymous"></script>
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/73b8d6ae8a.js" crossorigin="anonymous"></script>
 
     <!-- icons -->
     <link rel="stylesheet" href="{{asset('theme/frontend/icon.css')}}">
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="{{asset('theme/frontend/style.css')}}">
     <link rel="stylesheet" href="{{asset('theme/frontend/quote.css')}}">
     <link rel="stylesheet" href="{{asset('theme/frontend/responsive.css')}}">
- 
+
 
     <title>Karigor Interior BD - Home</title>
 </head>
@@ -126,6 +126,8 @@
     <!-- bootstrap cdn link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
+
+
 
     <!-- aos cdn link -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

@@ -20,6 +20,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('about-us')}}">About Us</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('front.brand')}}">Our Clients</a>
+                        </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"

@@ -8,7 +8,7 @@ body {
 }
 #about-us .about-us-title h1 {
     border-bottom: 2px solid rgb(185, 185, 185);
-    display: inline-block;
+   display: inline-block;
     margin-bottom: 20px;
     padding-bottom: 10px;
 }
@@ -58,3 +58,4 @@ body {
     border-radius: 5px;
 
 }
+

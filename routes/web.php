@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\ConstructionController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\InteriorController;
@@ -9,25 +10,19 @@ use App\Http\Controllers\ProjectConstructionController;
 use App\Http\Controllers\ProjectConstructionImageController;
 use App\Http\Controllers\ProjectImageController;
 use App\Http\Controllers\ProjectInteriorController;
+use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\ServiceConstructionController;
 use App\Http\Controllers\ServiceInteriorController;
 use App\Models\Project;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use Spatie\Permission\Models\Role;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
+
 
 //  ******** FRONTEND ROUTES ************
+
+
 Route::get('/', function () {
 
     $interiorProjects = Project::where('category_id', '1')->with('images')->orderBy('serial', 'asc')->get()->take(6);
@@ -41,6 +36,11 @@ Route::get('/construction-service', [ConstructionController::class, 'index'])->n
 Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact-us');
 Route::view('/quote', 'frontend.pages.quote')->name('quote');
 Route::get('/project/gallery/{id}', [ProjectImageController::class, 'ViewGallery']);
+Route::get('/brands',[BrandController::class,'FrontIndex'])->name('front.brand');
+Route::post('/contactus/mail', [ContactUsController::class, 'ContactUsmail'])->name('contact.us.mail');
+Route::post('/quote/mail', [QuoteController::class, 'Quotemail'])->name('quote.mail');
+
+
 
 
 
@@ -48,6 +48,9 @@ Route::get('/project/gallery/{id}', [ProjectImageController::class, 'ViewGallery
 
 
 //  ******** BACKEND ROUTES ************
+
+
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     // ASSINING A ROLE IF NOT EXISTS
     $user = Auth::user();
@@ -66,6 +69,8 @@ Route::middleware(['auth:sanctum', 'role:super-admin'])->group(function () {
 
     Route::resource('/user/management', ManageUserController::class);
 });
+
+
 Route::middleware(['auth:sanctum', 'role:super-admin|admin'])->group(function () {
 
 
@@ -75,4 +80,9 @@ Route::middleware(['auth:sanctum', 'role:super-admin|admin'])->group(function ()
     Route::resource('/projectinterior', ProjectInteriorController::class);
     Route::resource('/project-image', ProjectImageController::class);
     Route::resource('/project-construction-image', ProjectConstructionImageController::class);
+    Route::get('/add/brands', [BrandController::class, 'AdminIndex'])->name('view.brand');
+    Route::post('/store/brand', [BrandController::class, 'AddBrand'])->name('store.brand');
+    Route::post('/store/brand', [BrandController::class, 'AddBrand'])->name('store.brand');
+    Route::post('/delete/brand/{id}', [BrandController::class, 'DeleteBrand']);
+    
 });

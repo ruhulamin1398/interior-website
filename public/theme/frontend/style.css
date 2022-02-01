@@ -86,6 +86,56 @@ a:active {
 
 
 
+/* About us imagine start */
+
+.about-imagine h1 {
+    /* border-bottom: 2px solid; */
+    display: inline-block;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: BerlinSansFBDemiBold;
+}
+
+.about-imagine h1 span {
+    color: var(--color-base);
+}
+
+.about-imagine p {
+    position: relative;
+    color: #333;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2.8px;
+    font-family: 'Acme', sans-serif;
+}
+
+
+.imagine-icon {
+    color: #3184a5;
+    font-size: 3rem;
+     
+
+}
+.imagine-card{
+  margin: 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+} 
+.imagine-card h5{
+    font-size: 16px;   
+    font-weight: 600;
+}
+
+/* About us imagine end */
+
+
 
 
 /* Header
@@ -1245,35 +1295,6 @@ footer {
 
 
 
-/* quote section start */
-
-
-/* #quote-section {
-    padding: 80px 120px;
-} */
-
-#quote-section input, select{
-    height: 50px;
-}
-
-
-#quote-section textarea {
-    height: 200px;
-}
-.quote-button {
-    width: 150px;
-    height: 45px;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    background-color: #3184a5;
-}
-.quote-button:hover {
-    background-color: rgb(30, 90, 202);
-}
-
-
-
-/* quote section end */
 
 
 
@@ -1327,12 +1348,12 @@ footer {
 }
 
 #contact-section input, select{
-    height: 50px;
+   
 }
 
 
 #contact-section textarea {
-    height: 200px;
+    height: 150px;
 }
 .contact-button {
     width: 150px;
@@ -1348,3 +1369,20 @@ footer {
 
 
 /* contact us end */
+
+.radio-label {
+    color:#6C757D;
+    
+}
+
+.brandfilter{
+    transition:  1s;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);  
+}
+
+.brandfilter:hover{
+    transition:  1s;
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
