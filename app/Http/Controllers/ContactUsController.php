@@ -28,7 +28,7 @@ class ContactUsController extends Controller
 
             ];
 
-            Mail::to($request->email)->send(new ContactUsMail($contactUsMail));
+            Mail::to('contact@abasas.tech')->send(new ContactUsMail($contactUsMail));
           
   return back()->with('success','Thanks For your Message');
     } 

@@ -36,7 +36,7 @@ Route::get('/construction-service', [ConstructionController::class, 'index'])->n
 Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact-us');
 Route::view('/quote', 'frontend.pages.quote')->name('quote');
 Route::get('/project/gallery/{id}', [ProjectImageController::class, 'ViewGallery']);
-Route::get('/brands',[BrandController::class,'FrontIndex'])->name('front.brand');
+Route::get('/clients',[BrandController::class,'FrontIndex'])->name('front.brand');
 Route::post('/contactus/mail', [ContactUsController::class, 'ContactUsmail'])->name('contact.us.mail');
 Route::post('/quote/mail', [QuoteController::class, 'Quotemail'])->name('quote.mail');
 

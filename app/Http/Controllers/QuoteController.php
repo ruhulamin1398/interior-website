@@ -31,7 +31,7 @@ class QuoteController extends Controller
 
             ];
 
-            Mail::to($request->email)->send(new QuoteMail($quoteMail));
+            Mail::to('contact@abasas.tech')->send(new QuoteMail($quoteMail));
           
   return back()->with('success','Thanks For your Message We will Contact You Soon.');
     } 
