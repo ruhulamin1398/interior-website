@@ -15,7 +15,7 @@
     <h3>Password:  <b>{{$newUser['password']}}</b></h3>
   <h4>Thank You</h4> 
   <h3>Regards</h3> 
-  <h4>{{ Auth::user()->name }}</h4> 
+  <h4>Karigor Interior</h4> 
 
 </body>
 </html>

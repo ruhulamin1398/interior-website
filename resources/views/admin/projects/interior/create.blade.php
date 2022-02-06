@@ -40,26 +40,38 @@
             </div>
 
             <div class="form-group">
+                <label class="form-label" for="full-name">Serial</label>
+                <div class="form-control-wrap">
+                    <input type="number" class="form-control" name="serial">
+                </div>
+            </div>
+
+            <div class="form-group">
                 <label class="form-label" for="full-name">Short Description</label>
                 <div class="form-control-wrap">
-                    <input type="text" class="form-control" name="short_description" >
+                    <input type="text" class="form-control" name="short_description">
                     @if($errors->has('title'))
                     <span class="text-danger ">{{ $errors->first('short_description') }}</span>
                     @endif
                 </div>
             </div>
 
-            
+
+
+
+
             <div class="form-group">
                 <label class="form-label" for="full-name">Long Description</label>
                 <div class="form-control-wrap">
-                    
-                    <textarea id="summernote" name="long_description" class="form-control" ></textarea>
+
+                    <textarea id="summernote" name="long_description" class="form-control"></textarea>
                     @if($errors->has('title'))
                     <span class="text-danger ">{{ $errors->first('long_description') }}</span>
                     @endif
                 </div>
             </div>
+
+
 
 
             <div class="form-group">
@@ -74,16 +86,16 @@
 
 @section('js')
 <script>
-$(document).ready(function() {
-$('#summernote').summernote({
-        placeholder: 'Write here a description',
-        tabsize: 2,
-        height: 200
-      });
+    $(document).ready(function() {
+        $('#summernote').summernote({
+            placeholder: 'Write here a description',
+            tabsize: 2,
+            height: 200
+        });
 
-// var serviceList = @json($serviceList);
-// console.log(serviceList);
+        // var serviceList = @json($serviceList);
+        // console.log(serviceList);
 
-});
+    });
 </script>
 @endsection

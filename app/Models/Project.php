@@ -22,10 +22,13 @@ class Project extends Model
     //  return $this->belongsTo(SubCategory::class);
     // }
 
-    // public function ProjectImage()
-    // {
-    //  return $this->hasMany(ProjectImage::class,'id','project_id');
-    // }
+    public function images()
+    {
+     return $this->hasMany(ProjectImage::class);
+    }
+
+   
+
 
     
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use App\Models\ProjectImage;
 use Illuminate\Http\Request;
 
@@ -14,10 +15,13 @@ class ProjectConstructionImageController extends Controller
      */
     public function index(Request $request)
     {
+
+        ;
+
         $consProjectID = $request->constructionid;
         $projectTitle = $request->title;
         $consImageList = ProjectImage::where('project_id',$consProjectID)->get();
-      
+        
         return view('admin.projects.construction.image.index',compact('consProjectID','consImageList','projectTitle'));
     }
 
@@ -61,8 +65,8 @@ class ProjectConstructionImageController extends Controller
                 $projectImage->project_id = $request->projectid;
                 $projectImage->save();
             }
+            return back()->with('success','Images Uploaded Successfully');
 
-         return redirect()->route('project-construction-image.index')->with('success','Images Uploaded Successfully');
     }
 
     /**
@@ -108,6 +112,7 @@ class ProjectConstructionImageController extends Controller
     public function destroy($id)
     {
         ProjectImage::find($id)->delete();
-        return redirect()->route('project-construction-image.index')->with('success','Deleted Succesfully');
+        return back()->with('success','Images Deleted Successfully');
+        
     }
 }

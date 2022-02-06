@@ -43,6 +43,12 @@
                     @endif
                 </div>
             </div>
+            <div class="form-group">
+                <label class="form-label" for="full-name">Serial</label>
+                <div class="form-control-wrap">
+                    <input type="number" class="form-control" name="serial" value="{{$projectList->serial}}">
+                </div>
+            </div>
 
             <div class="form-group">
                 <label class="form-label" for="full-name">Short Description</label>

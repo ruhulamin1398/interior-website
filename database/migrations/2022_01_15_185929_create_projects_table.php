@@ -18,6 +18,7 @@ class CreateProjectsTable extends Migration
             $table->foreignid('category_id')->constrained('categories');
             $table->foreignid('subcategory_id')->constrained('sub_categories');
             $table->text('title')->nullable();
+            $table->integer('serial')->default(100);
             $table->longText('description')->nullable();
             $table->text('short_description')->nullable();
             $table->timestamps();
