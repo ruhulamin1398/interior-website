@@ -213,13 +213,14 @@
                 <div class="project-title-area">
                     <p class="project-title">{{$project->title}}</p>
                     <p class="project-status">
-
                         @if ($project->status ==0 )
-                        Upcoming
+
+                        <span class="text-warning">Upcoming</span>
                         @elseif ($project->status == 1 )
-                        Ongoing
+
+                        <span class="text-success">Ongoing</span>
                         @elseif ($project->status == 2 )
-                        Delivered
+                        <span class="text-primary">Delivered </span>
                         @endif
 
 
@@ -241,11 +242,13 @@
                     <p class="project-title">{{$project->title}}</p>
                     <p class="project-status">
                         @if ($project->status ==0 )
-                        Upcoming
+
+                        <span class="text-warning">Upcoming</span>
                         @elseif ($project->status == 1 )
-                        Ongoing
+
+                        <span class="text-success">Ongoing</span>
                         @elseif ($project->status == 2 )
-                        Delivered
+                        <span class="text-primary">Delivered </span>
                         @endif
                     </p>
                 </div>
@@ -266,11 +269,13 @@
                     <p class="project-status">
 
                         @if ($project->status ==0 )
-                        Upcoming
+
+                        <span class="text-warning">Upcoming</span>
                         @elseif ($project->status == 1 )
-                        Ongoing
+
+                        <span class="text-success">Ongoing</span>
                         @elseif ($project->status == 2 )
-                        Delivered
+                        <span class="text-primary">Delivered </span>
                         @endif
 
                     </p>
