@@ -246,7 +246,7 @@ a:active {
 
 .main-menu ul li a {
     color: #4c4855 !important;
-    font-size: 1.2rem;
+    font-size: 15px;
     text-transform: uppercase;
     -webkit-transition: color 0.4s ease;
     -o-transition: color 0.4s ease;
@@ -283,29 +283,36 @@ a:active {
 .carousel-item {
     position: relative;
     height: 100vh;
-    min-height: 360px;
+    /* min-height: 160px; */
+    /* width: 200rem; */
+    /* width: 50%; */
     font-family: BerlinSansFBDemiBold;
 }
 
 .carousel-item1 {
     background: -o-linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('./img/slider-01.jpg');
     background: linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('./img/slider-01.jpg');
-    background-size: cover;
+    background-size: 100% 100% ;
+   
     background-position: center;
+    background-repeat: no-repeat;
+    
 }
 
 .carousel-item2 {
     background: -o-linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('./img/slider-02.jpg');
     background: linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('./img/slider-02.jpg');
-    background-size: cover;
+    background-size:  100% 100% ;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .carousel-item3 {
     background: -o-linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('./img/slider-03.jpg');
     background: linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('./img/slider-03.jpg');
-    background-size: cover;
+    background-size:  100% 100%;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .carousel-caption {
@@ -406,6 +413,16 @@ a:active {
 
 
 
+
+
+/* service section  */
+
+.service-area a {
+        display: block;
+        padding: 25%;
+        text-align: center;
+        z-index: 1;
+      }
 
 
 /* Service Row
@@ -1375,14 +1392,3 @@ footer {
     
 }
 
-.brandfilter{
-    transition:  1s;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);  
-}
-
-.brandfilter:hover{
-    transition:  1s;
-    filter: none;
-    -webkit-filter: grayscale(0);
-}

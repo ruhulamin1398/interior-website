@@ -33,8 +33,8 @@
     <div class="container-xl pt-4 pb-5 d-flex flex-wrap justify-content-center justify-content-lg-start" data-aos="fade-up">
 
         @foreach($brandImages as $image)
-        <div class=" mb-3 ms-2 me-2 flex-grow-1 brandfilter ">
-            <img  src="/brand/picture/{{$image->image}}" height="200px" width="350px"  alt="">
+        <div class=" m-5 mb-3 ms-2 me-2 flex-grow-1 brandfilter ">
+            <img  src="/brand/picture/{{$image->image}}" height="150px" width="230px"  alt="">
 
             
         </div>

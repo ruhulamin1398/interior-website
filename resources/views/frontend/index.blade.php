@@ -59,24 +59,25 @@
     </div>
 
     <div class="container-lg pt-4 pb-5 d-flex flex-wrap justify-content-center justify-content-lg-start" data-aos="fade-up" data-aos-duration="700">
-        <div class="card mb-5 ms-2 me-2 flex-grow-1">
+        <div class="card mb-5 ms-2 me-2 flex-grow-1 ">
 
             <img loading="lazy" src="{{asset('theme/frontend/img/service-01.jpg')}}" alt="">
 
-            <div class="card-text-content">
+            <div class="card-text-content service-area">
                 <a href="{{route('front-interior')}}">
-                    <p>Interior Design</p>
+                    <p>Interior</p>
                 </a>
             </div>
         </div>
 
+
         <div class="card mb-5 ms-2 me-2 flex-grow-1">
             <img loading="lazy" src="{{asset('theme/frontend/img/service-02.jpg')}}" alt="">
 
-            <div class="card-text-content">
+            <div class="card-text-content service-area">
 
                 <a href="{{route('front-cons')}}">
-                    <p>Architecture</p>
+                    <p>Construction</p>
                 </a>
             </div>
         </div>
@@ -187,7 +188,7 @@
 
 
 <!-- exclusive project gallery start -->
-<div class="container-xxl gallery pt-5 mt-5">
+<div class="container-xxl gallery pt-5 mt-5" id="project-gallery">
     <div class="section-title">
         <h1>Exclusive<span> Projects</span></h1>
     </div>
@@ -196,40 +197,91 @@
         <ul class="filter-menu" data-aos="fade-up" data-aos-duration="500">
             <li data-list="interior" class="active-menu">Interior</li>
             <li data-list="construction">Construction</li>
+            <li data-list="allproject">All</li>
         </ul>
 
 
         <div class="filter-items" data-aos="fade-up" data-aos-duration="700">
 
-            @foreach($interiorProjects as $project)
-           
-            <div class="filter-content" data-item="interior">
-           
+
+            @foreach($allProjectsList as $project)
+
+            <div class="filter-content " data-item="allproject" data-projectID="{{$project->id}}">
+
                 <img loading="lazy" src="/project/picture/{{$project->images->first()->image}}" alt="">
-                <p class="hover-text "> <a href="{{ url('project/gallery/'.$project->id) }}" class="text-white"> {{$project->short_description}}   <a> </p>
+                <p class="hover-text ">{{$project->short_description}} </p>
                 <div class="project-title-area">
                     <p class="project-title">{{$project->title}}</p>
-                    <p class="project-status">Stauts</p>
+                    <p class="project-status">
+
+                        @if ($project->status ==0 )
+                        Upcoming
+                        @elseif ($project->status == 1 )
+                        Ongoing
+                        @elseif ($project->status == 2 )
+                        Delivered
+                        @endif
+
+
+                    </p>
                 </div>
-             
+
             </div>
-           
+
+            @endforeach
+
+
+            @foreach($interiorProjects as $project)
+
+            <div class="filter-content" data-item="interior" data-projectID="{{$project->id}}">
+
+                <img loading="lazy" src="/project/picture/{{$project->images->first()->image}}" alt="">
+                <p class="hover-text "> {{$project->short_description}} </p>
+                <div class="project-title-area">
+                    <p class="project-title">{{$project->title}}</p>
+                    <p class="project-status">
+                        @if ($project->status ==0 )
+                        Upcoming
+                        @elseif ($project->status == 1 )
+                        Ongoing
+                        @elseif ($project->status == 2 )
+                        Delivered
+                        @endif
+                    </p>
+                </div>
+
+            </div>
+
             @endforeach
 
 
             @foreach($constructionProjects as $project)
-            <div class="filter-content" data-item="construction">
+            <div class="filter-content" data-item="construction" data-projectID="{{$project->id}}">
 
                 <img loading="lazy" src="/project/picture/{{$project->images->first()->image}}" alt="">
 
-                <p class="hover-text"><a href="{{ url('project/gallery/'.$project->id) }}" class="text-white">{{$project->short_description}}<a></p>
+                <p class="hover-text">{{$project->short_description}}</p>
                 <div class="project-title-area">
                     <p class="project-title">{{$project->title}}</p>
-                    <p class="project-status">Stauts</p>
+                    <p class="project-status">
+
+                        @if ($project->status ==0 )
+                        Upcoming
+                        @elseif ($project->status == 1 )
+                        Ongoing
+                        @elseif ($project->status == 2 )
+                        Delivered
+                        @endif
+
+                    </p>
                 </div>
             </div>
 
             @endforeach
+
+
+
+
 
 
         </div>

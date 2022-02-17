@@ -54,35 +54,35 @@
                         <label class="mb-2 text-capitalize radio-label"> <b>What is your estimated budget for this project?*</b> </label>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="budget" id="exampleRadios1" value="1,00,000 - 5,00,000">
-                            <label class="form-check-label" for="exampleRadios1">
+                            <input class="form-check-input" type="radio" name="budget" id="budget1" value="1,00,000 - 5,00,000">
+                            <label class="form-check-label" for="budget1">
                                 1,00,000 - 5,00,000
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="budget" id="exampleRadios2" value="5,00,000 - 10,00,000">
-                            <label class="form-check-label" for="exampleRadios2">
+                            <input class="form-check-input" type="radio" name="budget" id="budget2" value="5,00,000 - 10,00,000">
+                            <label class="form-check-label" for="budget2">
                                 5,00,000 - 10,00,000
                             </label>
                         </div>
 
                         <div class="form-check ">
-                            <input class="form-check-input" type="radio" name="budget" id="exampleRadios3" value="10,00,000 - 20,00,000">
-                            <label class="form-check-label" for="exampleRadios3">
+                            <input class="form-check-input" type="radio" name="budget" id="budget3" value="10,00,000 - 20,00,000">
+                            <label class="form-check-label" for="budget3">
                                 10,00,000 - 20,00,000
                             </label>
                         </div>
 
                         <div class="form-check ">
-                            <input class="form-check-input" type="radio" name="budget" id="exampleRadios3" value="20,00,000 - 50,00,000">
-                            <label class="form-check-label" for="exampleRadios3">
+                            <input class="form-check-input" type="radio" name="budget" id="budget4" value="20,00,000 - 50,00,000">
+                            <label class="form-check-label" for="budget4">
                                 20,00,000 - 50,00,000
                             </label>
                         </div>
 
                         <div class="form-check ">
-                            <input class="form-check-input" type="radio" name="budget" id="exampleRadios3" value="50,00,000+">
-                            <label class="form-check-label" for="exampleRadios3">
+                            <input class="form-check-input" type="radio" name="budget" id="budget5" value="50,00,000+">
+                            <label class="form-check-label" for="budget5">
                                 50,00,000 +
                             </label>
                         </div>
@@ -115,14 +115,14 @@
                         <label class="mb-2 text-capitalize radio-label"> <b>What is the best way to contact you?*</b> </label>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="contact" id="exampleRadios1" value="Phone">
-                            <label class="form-check-label" for="exampleRadios1">
+                            <input class="form-check-input" type="radio" name="contact" id="contact1" value="Phone">
+                            <label class="form-check-label" for="contact1">
                                 Phone
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="contact" id="exampleRadios2" value="Email">
-                            <label class="form-check-label" for="exampleRadios2">
+                            <input class="form-check-input" type="radio" name="contact" id="contact2" value="Email">
+                            <label class="form-check-label" for="contact2">
                                 Email
                             </label>
                         </div>
@@ -133,14 +133,14 @@
                         <label class="mb-2 text-capitalize radio-label "> <b>Have you worked with a professional interior design firm before?*</b> </label>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="experience" id="exampleRadios1" value="yes">
-                            <label class="form-check-label" for="exampleRadios1">
+                            <input class="form-check-input" type="radio" name="experience" id="experience1" value="yes">
+                            <label class="form-check-label" for="experience1">
                                 Yes
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="experience" id="exampleRadios2" value="no">
-                            <label class="form-check-label" for="exampleRadios2">
+                            <input class="form-check-input" type="radio" name="experience" id="experience2" value="no">
+                            <label class="form-check-label" for="experience2">
                                 No
                             </label>
                         </div>

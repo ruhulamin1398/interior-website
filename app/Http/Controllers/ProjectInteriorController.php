@@ -58,6 +58,7 @@ class ProjectInteriorController extends Controller
         $service->description = $request->long_description;
         $service->serial = $request->serial;
         $service->subcategory_id = $request->sub_category_id;
+        $service->status = $request->projectStatus;
         $service->category_id = '1';
         $service->save();
 
@@ -104,6 +105,7 @@ class ProjectInteriorController extends Controller
         $service->description = $request->long_description;
         $service->serial = $request->serial;
         $service->subcategory_id = $request->sub_category_id;
+        $service->status = $request->projectStatus;
         $service->update();
 
         return redirect()->route('projectinterior.index')->with('success', 'Information Update succesfully');

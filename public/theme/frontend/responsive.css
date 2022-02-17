@@ -13,10 +13,10 @@
 
 }
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1200px) {
     .main-menu ul li {
         padding: 0 0.2rem;
-    }
+    }  
 }
 
 @media screen and (max-width: 992px) {
@@ -126,7 +126,7 @@
 
 @media screen and (max-width: 660px) {
     .topbar {
-        padding: 0.7rem 0.4rem;
+        /* padding: 0.7rem 0.4rem; */
     }
 
     .info-content p,

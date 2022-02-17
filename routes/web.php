@@ -27,7 +27,9 @@ Route::get('/', function () {
 
     $interiorProjects = Project::where('category_id', '1')->with('images')->orderBy('serial', 'asc')->get()->take(6);
     $constructionProjects = Project::where('category_id', '2')->with('images')->orderBy('serial', 'asc')->get()->take(6);
-    return view('frontend.index', compact('interiorProjects', 'constructionProjects'));
+    $allProjectsList = Project::with('images')->orderBy('serial', 'asc')->get();
+    
+    return view('frontend.index', compact('interiorProjects', 'constructionProjects','allProjectsList'));
 })->name('home-index');
 
 Route::get('/about-us', [AboutController::class, 'index'])->name('about-us');

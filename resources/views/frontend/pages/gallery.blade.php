@@ -31,7 +31,7 @@
                 @foreach($projectImages as $image)
 
                 <div class="filter-content" data-item="interior">
-                    <img loading="lazy" src="/project/picture/{{$image->image}}" alt="">
+                    <img loading="lazy" src="/project/picture/{{$image->image}}"  alt="">
                     <p class="hover-text"><span class="icon-plus"></span></p>
                 </div>
                 @endforeach

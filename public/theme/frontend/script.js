@@ -37,12 +37,22 @@ let filterMenu = document.querySelectorAll('.filter-menu li');
 let filterContents = document.querySelectorAll('.filter-content');
  
 
-// delete construction projects
+// delete construction projects on loaded
 for (let i = 0; i < filterContents.length; i++) {
     if (filterContents[i].getAttribute('data-item') === 'construction') {
         filterContents[i].classList.add('deleteContents');
     }
 }
+
+// delete All projects on Load
+for (let i = 0; i < filterContents.length; i++) {
+    if (filterContents[i].getAttribute('data-item') === 'allproject') {
+        filterContents[i].classList.add('deleteContents');
+    }
+}
+
+
+
 
 // filter construction and interior projects
 for (let i = 0; i < filterMenu.length; i++) {
@@ -77,6 +87,8 @@ let lightBoxImage = document.querySelector('.image-wrapper img');
 let lightBoxShadow = document.querySelector('.lightbox-shadow');
 let controlScrolling = document.querySelector('body');
 
+
+
 let leftArrow = document.querySelector('#left-arrow');
 let rightArrow = document.querySelector('#right-arrow');
 
@@ -88,6 +100,9 @@ if (closeBtn !== null) {
         controlScrolling.style.overflow = 'auto';
     }
 }
+
+
+
 
 for (let i = 0; i < filterContents.length; i++) {
     // lightbox show, slide, close
@@ -104,7 +119,10 @@ for (let i = 0; i < filterContents.length; i++) {
             controlScrolling.style.overflow = 'hidden';
         } else {
             // go to project page
-            // window.location = "project.html";
+            
+            let projectID = filterContents[i].getAttribute('data-projectid');
+       
+             window.location = "project/gallery/"+projectID;
         }
 
         // slide image
@@ -178,11 +196,15 @@ for (let i = 0; i < filterContents.length; i++) {
 }
 
 // service gallery
-// let galleryContent = document.querySelectorAll('.service-gallery-content');
 
-// for (let i = 0; i < galleryContent.length; i++) {
+let galleryContent = document.querySelectorAll('.service-gallery-content');
+
+for (let i = 0; i < galleryContent.length; i++) {
     // when onclick then go to project page
-//     galleryContent[i].onclick = () => {
-//         window.location = "project.html";
-//     }
-// }
+    galleryContent[i].onclick = () => {
+            
+        let projectID = galleryContent[i].getAttribute('data-projectid');
+
+        window.location = "project/gallery/"+projectID;
+    }
+}

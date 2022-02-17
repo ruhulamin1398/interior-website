@@ -22,7 +22,6 @@
 <!-- breadcrumb end -->
 
 
-
 <!-- services section start -->
 <div id="services" class="interior-services">
     <div class="section-title pt-5">
@@ -60,13 +59,13 @@
     <div class="service-gallery-wrapper mt-4">
         @foreach($interiorProjects as $project)
 
-        <div class="service-gallery-content">
+        <div class="service-gallery-content" data-projectID= "{{$project->id}}"  >
             <img loading="lazy" src="/project/picture/{{$project->images->first()->image}}" alt="">
            
             <div class="preview-details">
-            <a href="{{ url('project/gallery/'.$project->id) }}" class="text-white">
+          
                 <p class="preview-title">{{$project->title}}</p>
-                </a>
+            
             </div>
             <div class="service-project-title-area">
                 <p class="service-project-title">{{$project->title}}</p>

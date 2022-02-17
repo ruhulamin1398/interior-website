@@ -35,16 +35,16 @@
     <!-- header start -->
     <div class="header">
         <!-- topbar start -->
-        <div class="topbar container-fluid d-flex flex-wrap justify-content-center justify-content-lg-between position-static">
-            <div class="info-topbar mt-2 d-flex flex-wrap justify-content-center justify-content-lg-between">
+        <div class="topbar container-fluid d-flex flex-wrap justify-content-center justify-content-sm-between position-static">
+            <div class="info-topbar mt-2 d-flex flex-wrap justify-content-center justify-content-sm-between">
                 <div class="info-content d-inline-flex">
                     <div class="mt-1"><span class="icon-phone-alt"></span></div>
-                    <p class="phone ms-2">+88 01611-103410, +88 01972-103410</p>
+                    <p class="phone ms-1">+88 01611-103410, +88 01972-103410</p>
                 </div>
 
-                <div class="info-content ms-4 d-inline-flex">
+                <div class="info-content ms-2 d-inline-flex">
                     <div class="mt-1"><span class="icon-envelope"></span></div>
-                    <p class="email ms-2">karigorint@gmail.com</p>
+                    <p class="email ms-1">karigorint@gmail.com</p>
                 </div>
             </div>
 
@@ -54,7 +54,58 @@
         </div>
         <!-- topbar end -->
 
-        @include('frontend.include.navbar')
+        <!-- navbar start -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+            <div class="nav-content container-fluid">
+                <a class="navbar-brand" href="{{route('home-index')}}">
+                    <img loading="lazy" class="d-inline-block align-top" src="{{asset('theme/frontend/img/logo.png')}}" alt="brand-logo">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="main-menu collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{route('home-index')}}">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('about-us')}}">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('front.brand')}}">Our Clients</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                id="navbarDropdownMenuLink" role="button" aria-expanded="false">
+                                Our Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="{{route('front-interior')}}">Interior</a></li>
+                                <li><a class="dropdown-item" href="{{route('front-cons')}}">Construction</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('contact-us')}}">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="quote-btn">
+                    <a class="nav-link" href="{{route('quote')}}">Get a quote</a>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar end -->
+
+
+
 
 
     </div>
