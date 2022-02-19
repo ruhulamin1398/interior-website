@@ -59,14 +59,26 @@
         <div class="service-gallery-content">
             <img loading="lazy" src="/project/picture/{{$project->images->first()->image}}" alt="">
             <a href="{{ url('project/gallery/'.$project->id) }}" class="text-white">
-            <div class="preview-details">
-                <p class="preview-title">{{$project->title}}</p>
-            </div>
+                <div class="preview-details">
+                    <p class="preview-title">{{$project->title}}</p>
+                </div>
             </a>
 
             <div class="service-project-title-area">
                 <p class="service-project-title">{{$project->title}}</p>
-                <p class="service-project-status">Status</p>
+                <p class="service-project-status">
+
+                    @if ($project->status ==0 )
+
+                    <span class="text-warning">Upcoming</span>
+                    @elseif ($project->status == 1 )
+
+                    <span class="text-primary">Ongoing</span>
+                    @elseif ($project->status == 2 )
+                    <span class="text-success">Delivered </span>
+                    @endif
+
+                </p>
             </div>
         </div>
         @endforeach

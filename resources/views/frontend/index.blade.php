@@ -218,9 +218,9 @@
                         <span class="text-warning">Upcoming</span>
                         @elseif ($project->status == 1 )
 
-                        <span class="text-success">Ongoing</span>
+                        <span class="text-primary">Ongoing</span>
                         @elseif ($project->status == 2 )
-                        <span class="text-primary">Delivered </span>
+                        <span class="text-success">Delivered </span>
                         @endif
 
 
@@ -246,9 +246,9 @@
                         <span class="text-warning">Upcoming</span>
                         @elseif ($project->status == 1 )
 
-                        <span class="text-success">Ongoing</span>
+                        <span class="text-primary">Ongoing</span>
                         @elseif ($project->status == 2 )
-                        <span class="text-primary">Delivered </span>
+                        <span class="text-success">Delivered </span>
                         @endif
                     </p>
                 </div>
@@ -273,9 +273,9 @@
                         <span class="text-warning">Upcoming</span>
                         @elseif ($project->status == 1 )
 
-                        <span class="text-success">Ongoing</span>
+                        <span class="text-primary">Ongoing</span>
                         @elseif ($project->status == 2 )
-                        <span class="text-primary">Delivered </span>
+                        <span class="text-success">Delivered </span>
                         @endif
 
                     </p>

@@ -59,19 +59,31 @@
     <div class="service-gallery-wrapper mt-4">
         @foreach($interiorProjects as $project)
 
-        <div class="service-gallery-content" data-projectID= "{{$project->id}}"  >
+        <div class="service-gallery-content" data-projectID="{{$project->id}}">
             <img loading="lazy" src="/project/picture/{{$project->images->first()->image}}" alt="">
-           
+
             <div class="preview-details">
-          
+
                 <p class="preview-title">{{$project->title}}</p>
-            
+
             </div>
             <div class="service-project-title-area">
                 <p class="service-project-title">{{$project->title}}</p>
-                <p class="service-project-status">Status</p>
+                <p class="service-project-status">
+
+                    @if ($project->status ==0 )
+
+                    <span class="text-warning">Upcoming</span>
+                    @elseif ($project->status == 1 )
+
+                    <span class="text-primary">Ongoing</span>
+                    @elseif ($project->status == 2 )
+                    <span class="text-success">Delivered </span>
+                    @endif
+
+                </p>
             </div>
-           
+
         </div>
 
         @endforeach
