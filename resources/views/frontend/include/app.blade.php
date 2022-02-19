@@ -49,7 +49,7 @@
             </div>
 
             <div class="location-topbar ms-3 mt-2 d-flex align-items-center">
-                <p>Beg Tower(1st floor), Naiorpool, Sylhet</p>
+                <p >Beg Tower(1st floor), Naiorpool, Sylhet</p>
             </div>
         </div>
         <!-- topbar end -->

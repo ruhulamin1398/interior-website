@@ -130,9 +130,9 @@
     }
 
     .info-content p,
-    .location-topbar p {
+    /* .location-topbar p {
         font-size: 1rem;
-    }
+    } */
 
     .info-content .phone,
     .info-content .email {
@@ -141,6 +141,13 @@
 
     .navbar-brand {
         padding-left: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 550px){
+
+    .location-topbar p {
+        display: none;
     }
 }
 
