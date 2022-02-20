@@ -5,7 +5,7 @@
 @endsection
 
 @section('frontend')
-aaaaaaaaaaaaaa
+
     <!-- breadcrumb start -->
     <div class="container-fluid breadcrumb-area">
         <div class="container-lg">
