@@ -2,35 +2,51 @@
 AOS.init();
 
 // navbar animation
-let header = document.querySelector('.header');
-let carousel = document.querySelector('.carousel');
-let breadCrumb = document.querySelector('.breadcrumb-area');
-let topbar = document.querySelector('.topbar');
-
-window.onscroll = () => {
-    let scrollTop = document.documentElement.scrollTop;
-
-    if (scrollTop > header.offsetHeight) {
-        header.classList.add('active');
-        topbar.classList.add('d-none');
-
-        if (carousel !== null) {
-            carousel.style.marginTop = header.offsetHeight + 'px';
-        } else if (breadCrumb !== null) {
-            breadCrumb.style.marginTop = header.offsetHeight + 'px';
-        }
-    } else {
-        header.classList.remove('active');
-        topbar.classList.remove('d-none');
 
 
-        if (carousel !== null) {
-            carousel.style.marginTop = 0 + 'px';
-        } else if (breadCrumb !== null) {
-            breadCrumb.style.marginTop = 0 + 'px';
-        }
-    }
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
 }
+
+// let header = document.querySelector('.header');
+// let carousel = document.querySelector('.carousel');
+// let breadCrumb = document.querySelector('.breadcrumb-area');
+// let topbar = document.querySelector('.topbar');
+
+// window.onscroll = () => {
+//     let scrollTop = document.documentElement.scrollTop;
+
+//     if (scrollTop > header.offsetHeight) {
+//         header.classList.add('active');
+//         topbar.classList.add('d-none');
+
+//         if (carousel !== null) {
+//             carousel.style.marginTop = header.offsetHeight + 'px';
+//         } else if (breadCrumb !== null) {
+//             breadCrumb.style.marginTop = header.offsetHeight + 'px';
+//         }
+//     } else {
+//         header.classList.remove('active');
+//         topbar.classList.remove('d-none');
+
+
+//         if (carousel !== null) {
+//             carousel.style.marginTop = 0 + 'px';
+//         } else if (breadCrumb !== null) {
+//             breadCrumb.style.marginTop = 0 + 'px';
+//         }
+//     }
+// }
 
 // selecting filter menu and filter items
 let filterMenu = document.querySelectorAll('.filter-menu li');

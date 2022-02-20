@@ -140,6 +140,19 @@ a:active {
 
 /* Header
 ------------- */
+
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+
+
+
+
 .header {
     position: relative;
     z-index: 999999 !important;
@@ -760,8 +773,8 @@ a:active {
 
 /* lightbox */
 .lightbox {
-    position: fixed;
-    top: 50%;
+    position: absolute;
+    top: 20%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -790,7 +803,7 @@ a:active {
     transition: all 0.4s ease;
 }
 
-.lightbox .lightbox-content {
+/* .lightbox .lightbox-content {
     height: 100%;
     width: 100%;
     -webkit-transform: scale(0.4);
@@ -799,13 +812,13 @@ a:active {
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
-}
+} */
 
-.lightbox.show-lightbox .lightbox-content {
+/* .lightbox.show-lightbox .lightbox-content {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
-}
+} */
 
 
 .lightbox-header {

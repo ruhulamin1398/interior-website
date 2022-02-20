@@ -1,4 +1,10 @@
 @extends('frontend.include.app')
+
+@section('pageTitle')
+<title>Karigor Interior BD - Interior Services</title>
+@endsection
+
+
 @section('frontend')
 
 

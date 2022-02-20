@@ -1,4 +1,9 @@
 @extends('frontend.include.app')
+
+@section('pageTitle')
+<title>Karigor Interior BD - Quote</title>
+@endsection
+
 @section('frontend')
 
 @if($message = Session::get('success'))

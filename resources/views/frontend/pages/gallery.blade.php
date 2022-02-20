@@ -1,6 +1,11 @@
 @extends('frontend.include.app')
-@section('frontend')
 
+@section('pageTitle')
+<title>Karigor Interior BD - Project Gallery</title>
+@endsection
+
+@section('frontend')
+aaaaaaaaaaaaaa
     <!-- breadcrumb start -->
     <div class="container-fluid breadcrumb-area">
         <div class="container-lg">
@@ -31,7 +36,7 @@
                 @foreach($projectImages as $image)
 
                 <div class="filter-content" data-item="interior">
-                    <img loading="lazy" src="/project/picture/{{$image->image}}"  alt="">
+                    <img loading="lazy" src="/project/picture/{{$image->image}}"   alt="">
                     <p class="hover-text"><span class="icon-plus"></span></p>
                 </div>
                 @endforeach

@@ -1,4 +1,10 @@
 @extends('frontend.include.app')
+
+@section('pageTitle')
+<title>Karigor Interior BD - Home</title>
+@endsection
+
+
 @section('frontend')
 <!-- hero section start -->
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">

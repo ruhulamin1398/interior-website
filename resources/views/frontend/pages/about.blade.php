@@ -1,4 +1,9 @@
 @extends('frontend.include.app')
+
+@section('pageTitle')
+<title>Karigor Interior BD - About Us</title>
+@endsection
+
 @section('frontend')
 <!-- breadcrumb start -->
 <div class="container-fluid breadcrumb-area">
