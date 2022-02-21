@@ -147,6 +147,11 @@ a:active {
     position: fixed;
     top: 0;
     width: 100%;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation: animate 0.5s ease forwards;
+    animation: animate 0.5s ease forwards;
   }
   
 

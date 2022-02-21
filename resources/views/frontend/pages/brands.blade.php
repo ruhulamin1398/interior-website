@@ -2,7 +2,7 @@
 @section('frontend')
 
 @section('pageTitle')
-<title>Karigor Interior BD - Our Clients</title>
+<title>Our Clients - Karigor Interior BD</title>
 @endsection
 
 <!-- breadcrumb start -->

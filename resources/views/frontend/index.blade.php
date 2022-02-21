@@ -1,7 +1,7 @@
 @extends('frontend.include.app')
 
 @section('pageTitle')
-<title>Karigor Interior BD - Home</title>
+<title>Home - Karigor Interior BD</title>
 @endsection
 
 
