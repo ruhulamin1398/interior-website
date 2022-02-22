@@ -300,38 +300,49 @@ a:active {
 --------------------- */
 .carousel-item {
     position: relative;
-    height: 100vh;
-    /* min-height: 160px; */
-    /* width: 200rem; */
-    /* width: 50%; */
+
+   
     font-family: BerlinSansFBDemiBold;
 }
 
-.carousel-item1 {
+.carousel-item:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:rgba(0,0,0,0.2);
+    z-index: 0;
+  }
+
+/* .carousel-item1 {
     background: -o-linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('./img/slider-01.jpg');
     background: linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('./img/slider-01.jpg');
-    background-size: 100% 100% ;
+    background-size: cover ;
    
     background-position: center;
     background-repeat: no-repeat;
+    box-shadow: inset 2000px 0 0 0 rgba(0, 0, 0, 0.5);
     
-}
+} */
 
-.carousel-item2 {
+/* .carousel-item2 {
     background: -o-linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('./img/slider-02.jpg');
     background: linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('./img/slider-02.jpg');
     background-size:  100% 100% ;
     background-position: center;
     background-repeat: no-repeat;
-}
+} */
 
-.carousel-item3 {
+/* .carousel-item3 {
     background: -o-linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('./img/slider-03.jpg');
     background: linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('./img/slider-03.jpg');
     background-size:  100% 100%;
     background-position: center;
     background-repeat: no-repeat;
-}
+} */
 
 .carousel-caption {
     width: 800px;
@@ -341,11 +352,13 @@ a:active {
     -webkit-transform: translate(-50%, -55%);
     -ms-transform: translate(-50%, -55%);
     transform: translate(-50%, -55%);
+    z-index: 111111;
 }
 
 .carousel-caption h5 {
     font-size: 4rem;
     font-weight: 800;
+    
 }
 
 .carousel-caption p {

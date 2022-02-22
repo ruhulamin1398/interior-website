@@ -299,7 +299,7 @@
     }
 
     .carousel-caption h5 {
-        font-size: 1.7rem;
+        font-size: 1rem;
     }
 
     .carousel-caption p {
@@ -307,8 +307,18 @@
     }
 
     .carousel-caption p a {
+       
         font-size: 0.8rem;
     }
+    .carousel-control-next-icon{
+        margin-bottom: 150px;
+
+ }
+
+ .carousel-control-prev-icon{
+    margin-bottom: 150px;
+
+ }
 
     .lightbox {
         max-width: 340px;

@@ -6,7 +6,14 @@
 
 
 @section('frontend')
+
+
 <!-- hero section start -->
+
+
+
+
+
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -16,6 +23,7 @@
 
     <div class="carousel-inner">
         <div class="carousel-item carousel-item1 active">
+        <img src="{{asset('theme/frontend/img/slider-01.jpg')}}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-block">
                 <h5 class="animate__animated animate__fadeInDown" style="animation-duration: 1.7s; animation-delay: 0.6s">We Create Spaces for better living</h5>
                 <p class="animate__animated animate__fadeInDown" style="animation-duration: 1.7s; animation-delay: 1.7s">
@@ -25,6 +33,7 @@
         </div>
 
         <div class="carousel-item carousel-item2">
+        <img src="{{asset('theme/frontend/img/slider-02.jpg')}}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-block">
                 <h5 class="animate__animated animate__fadeInDown" style="animation-duration: 1.7s; animation-delay: 0.6s">Inspiring world with innovative space
                     design</h5>
@@ -35,6 +44,7 @@
         </div>
 
         <div class="carousel-item carousel-item3">
+        <img src="{{asset('theme/frontend/img/slider-03.jpg')}}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-block">
                 <h5 class="animate__animated animate__fadeInDown" style="animation-duration: 1.7s; animation-delay: 0.6s">Giving your home a modern and unique
                     style</h5>
@@ -55,6 +65,7 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
+
 <!-- hero section end -->
 
 <!-- services section start -->
@@ -300,3 +311,4 @@
 </div>
 <!-- exclusive project gallery end -->
 @endsection
+

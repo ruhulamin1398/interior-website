@@ -149,6 +149,8 @@
 
     <!-- custom js link -->
     <script src="{{asset('theme/frontend/script.js')}}"></script>
+
+  
 </body>
 
 </html>
