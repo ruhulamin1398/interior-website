@@ -30,6 +30,38 @@
 <!-- contact section start -->
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <section id="contact-section">
     <div>
 
@@ -39,33 +71,40 @@
         <div class="contact-form">
             <form action="{{route('contact.us.mail')}}" method="POST">
                 @csrf
-                <div class="row">
+                <div class="container">
+                <div class="row justify-content-center">
 
-                    <div class="mb-4 col-md-6 col-sm-12">
+                    <div class="col-lg-12 col-md-6 col-sm-12 text-center"">
                         <input required type="text" name="name" placeholder="Your Name" class="form-control">
+                        <input required type="email" name="email" placeholder="Your Email" class="form-control mt-3">
+                        <input required type="text" name="phone" placeholder="Your Phone" class="form-control mt-3">
+                        <textarea class="form-control mt-3" name="message" placeholder="Your Message"></textarea>
                     </div>
                     @if($errors->has('name'))
                     <span class="text-danger mt-2 ">{{ $errors->first('name') }}</span>
                     @endif
-                    <div class="mb-4 col-md-6 col-sm-12">
-                        <input required type="email" name="email" placeholder="Your Email" class="form-control">
-                    </div>
+
+
 
 
                     @if($errors->has('email'))
                     <span class="text-danger mt-2 ">{{ $errors->first('email') }}</span>
                     @endif
 
-                    <div class="mb-4 col-12">
-                        <textarea class="form-control" name="message" placeholder="Your Message"></textarea>
-                    </div>
+                  
                     @if($errors->has('message'))
                     <span class="text-danger mt-2 ">{{ $errors->first('message') }}</span>
                     @endif
 
                 </div>
 
-                <button type="submit" class="btn btn-secondary contact-button">Submit</button>
+               
+                    <div class="col-md-12 text-center mt-3">
+                    <button type="submit" class="btn btn-secondary contact-button ">Submit</button>
+                    </div>
+                </div>
+
+               
             </form>
         </div>
 

@@ -23,7 +23,7 @@
 
     <div class="carousel-inner">
         <div class="carousel-item carousel-item1 active">
-        <img src="{{asset('theme/frontend/img/slider-01.jpg')}}" class="d-block w-100" alt="...">
+
             <div class="carousel-caption d-block">
                 <h5 class="animate__animated animate__fadeInDown" style="animation-duration: 1.7s; animation-delay: 0.6s">We Create Spaces for better living</h5>
                 <p class="animate__animated animate__fadeInDown" style="animation-duration: 1.7s; animation-delay: 1.7s">
@@ -33,7 +33,7 @@
         </div>
 
         <div class="carousel-item carousel-item2">
-        <img src="{{asset('theme/frontend/img/slider-02.jpg')}}" class="d-block w-100" alt="...">
+ 
             <div class="carousel-caption d-block">
                 <h5 class="animate__animated animate__fadeInDown" style="animation-duration: 1.7s; animation-delay: 0.6s">Inspiring world with innovative space
                     design</h5>
@@ -44,7 +44,7 @@
         </div>
 
         <div class="carousel-item carousel-item3">
-        <img src="{{asset('theme/frontend/img/slider-03.jpg')}}" class="d-block w-100" alt="...">
+    
             <div class="carousel-caption d-block">
                 <h5 class="animate__animated animate__fadeInDown" style="animation-duration: 1.7s; animation-delay: 0.6s">Giving your home a modern and unique
                     style</h5>
@@ -69,7 +69,7 @@
 <!-- hero section end -->
 
 <!-- services section start -->
-<div id="services">
+<div id="services" >
     <div class="section-title pt-5">
         <h1 class="text-center"><span>Our</span> Services</h1>
         <p class="text-center">What we do</p>

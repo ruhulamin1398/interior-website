@@ -29,7 +29,7 @@
 
     @yield('pageTitle')
 
-  
+
 
 
 </head>
@@ -38,20 +38,18 @@
     <!-- header start -->
     <div class="header">
         <!-- topbar start -->
-        <div class="topbar container-fluid d-flex flex-wrap justify-content-center justify-content-sm-between position-static">
-            <div class="info-topbar mt-2 d-flex flex-wrap justify-content-center justify-content-sm-between">
-                <div class="info-content d-inline-flex">
-                    <div class="mt-1"><span class="icon-phone-alt"></span></div>
-                    <p class="phone ms-1">+88 01611-103410, +88 01972-103410</p>
-                </div>
-
-                <div class="info-content ms-2 d-inline-flex">
-                    <div class="mt-1"><span class="icon-envelope"></span></div>
-                    <p class="email ms-1">karigorint@gmail.com</p>
-                </div>
+        <div class="topbar container-fluid d-flex flex-wrap justify-content-center justify-content-sm-between">
+            <div class="info-content mt-2">
+                <p class="phone ms-1 info-content">+88 01611-103410, +88 01972-103410</p>
             </div>
 
-            <div class="location-topbar ms-3 mt-2 d-flex align-items-center">
+
+            <div class="info-content mt-2">
+                <p class="email ms-1">karigorint@gmail.com</p>
+
+            </div>
+
+            <div class="location-topbar mt-2">
                 <p>Beg Tower(1st floor), Naiorpool, Sylhet</p>
             </div>
         </div>
@@ -60,13 +58,13 @@
         <!-- navbar start -->
 
 
-<div id="navbar">
-@include('frontend.include.navbar')
-</div>
+        <div id="navbar">
+            @include('frontend.include.navbar')
+        </div>
 
 
 
- <!-- navbar end -->
+        <!-- navbar end -->
 
 
 
@@ -150,7 +148,7 @@
     <!-- custom js link -->
     <script src="{{asset('theme/frontend/script.js')}}"></script>
 
-  
+
 </body>
 
 </html>
