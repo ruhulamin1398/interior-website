@@ -5,17 +5,17 @@ AOS.init();
 
 
 
-window.onscroll = function() {myFunction()};
+window.onscroll = function () { myFunction() };
 
 var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
 
 function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
 }
 
 // let header = document.querySelector('.header');
@@ -51,7 +51,7 @@ function myFunction() {
 // selecting filter menu and filter items
 let filterMenu = document.querySelectorAll('.filter-menu li');
 let filterContents = document.querySelectorAll('.filter-content');
- 
+
 
 // delete construction projects on loaded
 for (let i = 0; i < filterContents.length; i++) {
@@ -135,10 +135,10 @@ for (let i = 0; i < filterContents.length; i++) {
             controlScrolling.style.overflow = 'hidden';
         } else {
             // go to project page
-            
+
             let projectID = filterContents[i].getAttribute('data-projectid');
-       
-             window.location = "project/gallery/"+projectID;
+
+            window.location = "project/gallery/" + projectID;
         }
 
         // slide image
@@ -218,9 +218,28 @@ let galleryContent = document.querySelectorAll('.service-gallery-content');
 for (let i = 0; i < galleryContent.length; i++) {
     // when onclick then go to project page
     galleryContent[i].onclick = () => {
-            
+
         let projectID = galleryContent[i].getAttribute('data-projectid');
 
-        window.location = "project/gallery/"+projectID;
+        window.location = "project/gallery/" + projectID;
+    }
+}
+
+// Constrcuction section Clickable
+let serviceClickCons = document.querySelectorAll('.construction-text');
+
+for (let i = 0; i < serviceClickCons.length; i++) {
+    serviceClickCons[i].onclick = () => {
+        window.location = "/construction-service";
+    }
+}
+
+// Interior Section Clickable
+
+let serviceClickInterior = document.querySelectorAll('.interior-text');
+
+for (let i = 0; i < serviceClickInterior.length; i++) {
+    serviceClickInterior[i].onclick = () => {
+        window.location = "/interior-service";
     }
 }

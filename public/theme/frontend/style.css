@@ -458,10 +458,12 @@ a:active {
         display: block;
         padding: 25%;
         text-align: center;
+        background-color: orange;
         z-index: 1;
       }
 
 
+      
 /* Service Row
 ----------------------- */
 .service-row {
@@ -521,6 +523,7 @@ a:active {
     transform: translate(-90%, -50%);
     background: #eee;
     border-radius: 0.2rem;
+    cursor: pointer;
 }
 
 
@@ -534,6 +537,7 @@ a:active {
     transform: translate(-10%, -50%);
     background: #eee;
     border-radius: 0.2rem;
+    cursor: pointer;
 }
 
 .service-row-text h2 {

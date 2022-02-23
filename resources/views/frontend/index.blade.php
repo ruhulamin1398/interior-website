@@ -56,12 +56,12 @@
     </div>
 
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="carousel-control-prev-icon control-button" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
     </button>
 
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon control-button" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </button>
 </div>
@@ -113,6 +113,7 @@
 
         <div class="service-row-text construction-text">
             <h2>Construction</h2>
+            
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos suscipit repellendus ipsa libero totam
                 quod est cumque nobis architecto fugiat nesciunt ducimus eius Quidem sit commodi nemo quaerat magnam
                 nostrum voluptatibus fugiat reiciendis ratione pariatur totam voluptatem minima sapiente harum.</p>
