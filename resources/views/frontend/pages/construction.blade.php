@@ -61,7 +61,7 @@
     <div class="service-gallery-wrapper mt-4">
 
         @foreach($constructionProjects as $project)
-        <div class="service-gallery-content">
+        <div class="service-gallery-content" data-projectID="{{$project->id}}">
             <img loading="lazy" src="/project/picture/{{$project->images->first()->image}}" alt="">
             <a href="{{ url('project/gallery/'.$project->id) }}" class="text-white">
                 <div class="preview-details">

@@ -9,17 +9,14 @@
 </head>
 
 <body>
- <h3><b>{{$contactUsMail['name']}}</b> just send a message from contact us </h3>
 
-      <h4>Sent from <b>{{$contactUsMail['email']}}</b></h4>
-      <h4>Phone Number: <b>{{$contactUsMail['phone']}}</b></h4>
+  <h4>Name: <b>{{$contactUsMail['name']}}</b></h4>
+  <h4>Email: <b>{{$contactUsMail['email']}}</b></h4>
+  <h4>Phone Number: <b>{{$contactUsMail['phone']}}</b></h4>
 
 
-      <h3>Message:</h3>
-     {{$contactUsMail['message']}}
-      <h4>Thank You</h4>
-      <h3>Regards</h3>
-      <h4>Karigor Interior</h4>
+  <h3>Message:</h3>
+  {{$contactUsMail['message']}}
 
 </body>
 

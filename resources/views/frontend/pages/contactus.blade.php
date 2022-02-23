@@ -62,9 +62,8 @@
 
 
 
-<section id="contact-section">
-    <div>
-
+<section >
+   
 
 
 
@@ -75,10 +74,10 @@
                 <div class="row justify-content-center">
 
                     <div class="col-lg-12 col-md-6 col-sm-12 text-center"">
-                        <input required type="text" name="name" placeholder="Your Name" class="form-control">
+                        <input required type="text" name="name" placeholder="Your Name" class="form-control mt-5">
                         <input required type="email" name="email" placeholder="Your Email" class="form-control mt-3">
                         <input required type="text" name="phone" placeholder="Your Phone" class="form-control mt-3">
-                        <textarea class="form-control mt-3" name="message" placeholder="Your Message"></textarea>
+                        <textarea class="form-control mt-3" name="message" placeholder="Your Message" rows="6"></textarea>
                     </div>
                     @if($errors->has('name'))
                     <span class="text-danger mt-2 ">{{ $errors->first('name') }}</span>
@@ -108,7 +107,6 @@
             </form>
         </div>
 
-    </div>
 </section>
 
 

@@ -316,6 +316,9 @@
     .control-button{
         margin-bottom: 30px;
     }
+    .quote-section{
+        padding: 0!important;
+    }
 
 }
 

@@ -12,7 +12,7 @@
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 @endif
-<section id="quote-section">
+<section id="">
     <div class="container pt-5">
 
         <div class="section-title mb-5">
@@ -101,13 +101,13 @@
                         <label class="mb-2 text-capitalize radio-label "> <b>Is there a particular deadline for this project?*</b> </label>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="deadline" id="ab1" value="yes">
+                            <input class="form-check-input" type="radio" name="deadline" id="ab1" value="Yes">
                             <label class="form-check-label" for="ab1">
                                 Yes
                             </label>
                         </div>
                         <div class="">
-                            <input class="form-check-input" type="radio" name="deadline" id="ab2" value="no">
+                            <input class="form-check-input" type="radio" name="deadline" id="ab2" value="No">
                             <label class="form-check-label" for="ab2">
                                 No
                             </label>
@@ -138,13 +138,13 @@
                         <label class="mb-2 text-capitalize radio-label "> <b>Have you worked with a professional interior design firm before?*</b> </label>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="experience" id="experience1" value="yes">
+                            <input class="form-check-input" type="radio" name="experience" id="experience1" value="Yes">
                             <label class="form-check-label" for="experience1">
                                 Yes
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="experience" id="experience2" value="no">
+                            <input class="form-check-input" type="radio" name="experience" id="experience2" value="No">
                             <label class="form-check-label" for="experience2">
                                 No
                             </label>
@@ -155,13 +155,17 @@
 
 
                     <div class="mb-4 col-12">
-                        <textarea class="form-control" name="message" placeholder="Your Message"></textarea>
+                        <textarea class="form-control" name="message" placeholder="Your Message" rows="6" ></textarea>
                     </div>
 
 
                 </div>
 
-                <button type="submit" class="btn btn-secondary quote-button">Submit</button>
+                <div class="col-md-12 text-center mt-3">
+                    <button type="submit" class="btn btn-secondary quote-button ">Submit</button>
+                    </div>
+
+           
             </form>
         </div>
 
