@@ -309,6 +309,10 @@
     .info-content .email {
         margin-top: -5vw;
     }
+    .topbar {
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
     .control-button{
         margin-bottom: 30px;
     }

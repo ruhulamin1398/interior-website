@@ -40,12 +40,12 @@
         <!-- topbar start -->
         <div class="topbar container-fluid d-flex flex-wrap justify-content-center justify-content-sm-between">
             <div class="info-content mt-2">
-                <p class="phone ms-1 info-content">+88 01611-103410, +88 01972-103410</p>
+                <p class="phone info-content">+88 01611-103410, +88 01972-103410</p>
             </div>
 
 
             <div class="info-content mt-2">
-                <p class="email ms-1">karigorint@gmail.com</p>
+                <p class="email">karigorint@gmail.com</p>
 
             </div>
 
