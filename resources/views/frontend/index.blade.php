@@ -33,7 +33,7 @@
         </div>
 
         <div class="carousel-item carousel-item2">
- 
+
             <div class="carousel-caption d-block">
                 <h5 class="animate__animated animate__fadeInDown" style="animation-duration: 1.7s; animation-delay: 0.6s">Inspiring world with innovative space
                     design</h5>
@@ -44,7 +44,7 @@
         </div>
 
         <div class="carousel-item carousel-item3">
-    
+
             <div class="carousel-caption d-block">
                 <h5 class="animate__animated animate__fadeInDown" style="animation-duration: 1.7s; animation-delay: 0.6s">Giving your home a modern and unique
                     style</h5>
@@ -69,7 +69,7 @@
 <!-- hero section end -->
 
 <!-- services section start -->
-<div id="services" >
+<div id="services">
     <div class="section-title pt-5">
         <h1 class="text-center"><span>Our</span> Services</h1>
         <p class="text-center">What we do</p>
@@ -113,7 +113,7 @@
 
         <div class="service-row-text construction-text">
             <h2>Construction</h2>
-            
+
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos suscipit repellendus ipsa libero totam
                 quod est cumque nobis architecto fugiat nesciunt ducimus eius Quidem sit commodi nemo quaerat magnam
                 nostrum voluptatibus fugiat reiciendis ratione pariatur totam voluptatem minima sapiente harum.</p>
@@ -312,4 +312,3 @@
 </div>
 <!-- exclusive project gallery end -->
 @endsection
-
