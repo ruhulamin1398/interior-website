@@ -17,6 +17,10 @@
     .main-menu ul li {
         padding: 0 0.2rem;
     }  
+    .card .card-text-content p {
+        font-size: 2rem;
+    }
+
 }
 
 @media screen and (max-width: 992px) {
@@ -115,6 +119,10 @@
         padding: 0.6rem 1.4rem 0 1.4rem;
     }
 
+    .client-image{
+        padding-left: 100px;
+    }
+
 }
 
 @media screen and (max-width: 740px) {
@@ -154,6 +162,13 @@
 
     .location-topbar p {
         display: none;
+    }
+
+    .card .card-text-content p {
+        padding: 0 0.6rem;
+        font-size: 2rem;
+        font-weight: 400;
+     
     }
 }
 
@@ -247,6 +262,22 @@
         padding: 0.3rem 1rem;
         font-size: 1.1rem;
     }
+
+    .card .card-text-content p {
+        padding: 0 0.6rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: #fff;
+        text-align: center;
+        text-transform: capitalize;
+        text-shadow: 2px 2px 4px #444;
+        font-family: BerlinSansFBDemiBold;
+    }
+    .client-image{
+        padding-left: 80px;
+    }
+
 }
 
 @media screen and (max-width: 440px) {
@@ -320,6 +351,28 @@
         padding: 0!important;
     }
 
+    .section-title{
+
+        margin-top: 60px;
+    }
+
+    .card .card-text-content p {
+        padding: 0 0.6rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+     
+    }
+    .breadcrumb-area .title h2 {
+       
+        font-size: 1.5rem;
+        
+    }
+    .breadcrumb{
+        display: none;
+    }
+    .client-image{
+        padding-left: 60px;
+    }
 }
 
 @media screen and (max-width: 420px) {
@@ -346,6 +399,9 @@
     .lightbox {
         max-width: 340px;
         max-height: 240px;
+    }
+    .client-image{
+        padding-left: 40px;
     }
 }
 
@@ -411,6 +467,10 @@
         -ms-transform: translate(-50%, 12%);
         transform: translate(-50%, 12%);
     }
+    .client-image{
+        padding-left: 35px;
+    }
+   
 }
 
 @media screen and (max-width: 360px) {
@@ -424,7 +484,7 @@
     }
 
     .card .card-text-content p {
-        font-size: 2rem;
+        font-size: 1.4rem;
     }
 
     .lightbox {
@@ -440,6 +500,9 @@
 
     .filter-items .filter-content {
         height: 260px;
+    }
+    .client-image{
+        padding-left: 25px;
     }
 }
 

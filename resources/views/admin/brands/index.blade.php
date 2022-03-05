@@ -81,7 +81,7 @@
                                             </td>
 
                                             <td class="nk-tb-col nk-tb-col-tools">
-                                                <ul class="nk-tb-actions gx-1 float-left">
+                                                <ul class="nk-tb-actions gx-1 ">
                                                     <li>
                                                         <form action="/delete/brand/{{$image->id}}" method="post">
                                                             @csrf

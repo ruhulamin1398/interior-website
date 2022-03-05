@@ -13,14 +13,14 @@
         <div class="title">
             <h2>Our Services</h2>
         </div>
-
+<!-- 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{route('home-index')}}">Home</a></li>
                 <li class="breadcrumb-item"><a href="{{route('front-interior')}}">Our Services</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Construction</li>
             </ol>
-        </nav>
+        </nav> -->
     </div>
 </div>
 <!-- breadcrumb end -->
@@ -28,8 +28,8 @@
 
 
 <!-- services section start -->
-<div id="services" class="construction-services">
-    <div class="section-title pt-5">
+<div class="construction-services">
+    <div class="section-title mt-5">
         <h1 class="text-center"><span>Construction</span> Services</h1>
         <p class="text-center">What we do</p>
     </div>

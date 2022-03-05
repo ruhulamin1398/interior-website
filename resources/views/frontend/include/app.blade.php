@@ -91,11 +91,10 @@
                     <h5>Contact <span>info</span></h5>
 
                     <div class="contact-info">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate commodi quisquam eius
-                            fugiat vero quidem atque.</p>
+                       
                         <div class="info-area">
                             <h6>Main office</h6>
-                            <p>Beg Tower(1st floor), Naiorpool, Sylhet.</p>
+                            <p>Beg Tower(1st floor). Naiorpool, Opposite of Naiorpool Mosque, Sylhet Division (3100), Bangladesh</p>
                         </div>
 
                         <div class="info-area pt-3">

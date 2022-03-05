@@ -213,9 +213,10 @@
 
     <div class="wrapper">
         <ul class="filter-menu" data-aos="fade-up" data-aos-duration="500">
-            <li data-list="interior" class="active-menu">Interior</li>
+            <li data-list="allproject" class="active-menu">All</li>
+            <li data-list="interior-home" >Interior</li>
             <li data-list="construction">Construction</li>
-            <li data-list="allproject">All</li>
+           
         </ul>
 
 
@@ -252,7 +253,7 @@
 
             @foreach($interiorProjects as $project)
 
-            <div class="filter-content" data-item="interior" data-projectID="{{$project->id}}">
+            <div class="filter-content" data-item="interior-home" data-projectID="{{$project->id}}">
 
                 <img loading="lazy" src="/project/picture/{{$project->images->first()->image}}" alt="">
                 <p class="hover-text "> {{$project->short_description}} </p>

@@ -62,7 +62,7 @@ for (let i = 0; i < filterContents.length; i++) {
 
 // delete All projects on Load
 for (let i = 0; i < filterContents.length; i++) {
-    if (filterContents[i].getAttribute('data-item') === 'allproject') {
+    if (filterContents[i].getAttribute('data-item') === 'interior-home') {
         filterContents[i].classList.add('deleteContents');
     }
 }
