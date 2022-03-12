@@ -114,9 +114,7 @@
         <div class="service-row-text construction-text">
             <h2>Construction</h2>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos suscipit repellendus ipsa libero totam
-                quod est cumque nobis architecto fugiat nesciunt ducimus eius Quidem sit commodi nemo quaerat magnam
-                nostrum voluptatibus fugiat reiciendis ratione pariatur totam voluptatem minima sapiente harum.</p>
+            <p>Our construction recruitment specialists will work alongside you to develop and optimise an effective talent acquisition and pipeline strategy. Services include contract hire, direct hire and engaged search.</p>
             <p class="learn-more-btn"><a href="{{route('front-cons')}}">Learn more</a></p>
         </div>
     </div>
@@ -134,9 +132,7 @@
 
         <div class="service-row-text interior-text">
             <h2>Interiors</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos suscipit repellendus ipsa libero totam
-                quod est cumque nobis architecto fugiat nesciunt ducimus eius Quidem sit commodi nemo quaerat magnam
-                nostrum voluptatibus fugiat reiciendis ratione pariatur totam voluptatem minima sapiente harum.</p>
+            <p>Karigor will customize your home or business, Interior space according to your needs or desires. Whether we place a custom-mixed paint splash on a wall for you or rearrange your home or workspace with fabulous decorum and furniture, You will be amazed.</p>
             <p class="learn-more-btn"><a href="{{route('front-interior')}}">Learn more</a></p>
         </div>
     </div>
