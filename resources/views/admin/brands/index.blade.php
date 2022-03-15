@@ -45,7 +45,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary float-right">Add Brand</button>
+                            <button type="submit" class="btn btn-primary float-right">Add Clients</button>
                         </div>
                     </div>
 
