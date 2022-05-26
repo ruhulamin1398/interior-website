@@ -140,6 +140,24 @@ a:active {
 
 /* Header
 ------------- */
+
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation: animate 0.5s ease forwards;
+    animation: animate 0.5s ease forwards;
+  }
+  
+
+
+
+
 .header {
     position: relative;
     z-index: 999999 !important;
@@ -184,20 +202,21 @@ a:active {
 
 /* topbar */
 .topbar {
-    padding: 0.5rem 6rem;
+    
     background: var(--color-base);
     font-family: 'Berlin Sans FB';
+   
 }
 
 .info-content div span {
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 15px;
 }
 
 .info-content p,
 .location-topbar p {
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 15px;
 }
 
 
@@ -246,7 +265,7 @@ a:active {
 
 .main-menu ul li a {
     color: #4c4855 !important;
-    font-size: 1.2rem;
+    font-size: 15px;
     text-transform: uppercase;
     -webkit-transition: color 0.4s ease;
     -o-transition: color 0.4s ease;
@@ -282,30 +301,53 @@ a:active {
 --------------------- */
 .carousel-item {
     position: relative;
-    height: 100vh;
-    min-height: 360px;
+    height: 110vh;
     font-family: BerlinSansFBDemiBold;
 }
+
+/* .slider-img {
+    min-width: 100%;
+    width: 100%;
+    
+  } */
+
+/* .carousel-item:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:rgba(0,0,0,0.3);
+    z-index: 0;
+  } */
 
 .carousel-item1 {
     background: -o-linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('./img/slider-01.jpg');
     background: linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('./img/slider-01.jpg');
-    background-size: cover;
+    background-size: cover ;
+  
     background-position: center;
+    background-repeat: no-repeat;
+  
+    
 }
 
 .carousel-item2 {
     background: -o-linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('./img/slider-02.jpg');
     background: linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('./img/slider-02.jpg');
-    background-size: cover;
+    background-size:  100% 100% ;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .carousel-item3 {
     background: -o-linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('./img/slider-03.jpg');
     background: linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('./img/slider-03.jpg');
-    background-size: cover;
+    background-size:  100% 100%;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .carousel-caption {
@@ -316,11 +358,13 @@ a:active {
     -webkit-transform: translate(-50%, -55%);
     -ms-transform: translate(-50%, -55%);
     transform: translate(-50%, -55%);
+    z-index: 111111;
 }
 
 .carousel-caption h5 {
     font-size: 4rem;
     font-weight: 800;
+    
 }
 
 .carousel-caption p {
@@ -408,6 +452,18 @@ a:active {
 
 
 
+/* service section  */
+
+.service-area a {
+        display: block;
+        padding: 25%;
+        text-align: center;
+       
+        z-index: 1;
+      }
+
+
+      
 /* Service Row
 ----------------------- */
 .service-row {
@@ -467,6 +523,7 @@ a:active {
     transform: translate(-90%, -50%);
     background: #eee;
     border-radius: 0.2rem;
+    cursor: pointer;
 }
 
 
@@ -480,6 +537,7 @@ a:active {
     transform: translate(-10%, -50%);
     background: #eee;
     border-radius: 0.2rem;
+    cursor: pointer;
 }
 
 .service-row-text h2 {
@@ -743,8 +801,8 @@ a:active {
 
 /* lightbox */
 .lightbox {
-    position: fixed;
-    top: 50%;
+    position: absolute;
+    top: 20%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -773,7 +831,7 @@ a:active {
     transition: all 0.4s ease;
 }
 
-.lightbox .lightbox-content {
+/* .lightbox .lightbox-content {
     height: 100%;
     width: 100%;
     -webkit-transform: scale(0.4);
@@ -782,13 +840,13 @@ a:active {
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
-}
+} */
 
-.lightbox.show-lightbox .lightbox-content {
+/* .lightbox.show-lightbox .lightbox-content {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
-}
+} */
 
 
 .lightbox-header {
@@ -930,7 +988,7 @@ a:active {
 .breadcrumb-area .title h2 {
     margin-bottom: 0;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     font-family: 'Berlin Sans FB';
     text-transform: uppercase;
@@ -1343,13 +1401,7 @@ footer {
 /* contact us start */
 
 
-#contact-section {
-    padding: 80px 120px;
-}
 
-#contact-section input, select{
-   
-}
 
 
 #contact-section textarea {
@@ -1361,6 +1413,7 @@ footer {
     border-radius: 5px;
     font-size: 1.1rem;
     background-color: #3184a5;
+    
 }
 .contact-button:hover {
     background-color: rgb(30, 90, 202);
@@ -1375,14 +1428,3 @@ footer {
     
 }
 
-.brandfilter{
-    transition:  1s;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);  
-}
-
-.brandfilter:hover{
-    transition:  1s;
-    filter: none;
-    -webkit-filter: grayscale(0);
-}

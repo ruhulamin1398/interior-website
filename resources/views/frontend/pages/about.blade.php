@@ -1,4 +1,9 @@
 @extends('frontend.include.app')
+
+@section('pageTitle')
+<title>About Us - Karigor Interior BD</title>
+@endsection
+
 @section('frontend')
 <!-- breadcrumb start -->
 <div class="container-fluid breadcrumb-area">
@@ -6,13 +11,13 @@
         <div class="title">
             <h2>About Us</h2>
         </div>
-
+<!-- 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{route('home-index')}}">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">About Us</li>
             </ol>
-        </nav>
+        </nav> -->
     </div>
 </div>
 <!-- breadcrumb end -->
@@ -50,7 +55,7 @@
 
     <div class="container pt-5">
         <div class="section-title why-choose-title text-center">
-            <h1>Why Choose<span> Karighor</span></h1>
+            <h1>Why Choose<span> Karigor</span></h1>
         </div>
 
 
@@ -124,8 +129,8 @@
             <h1>Get The<span> Imagine Interiors</span> Advantage</h1>
         </div>
 
-        <div class="row mt-1 mb-5 justify-content-center ">
-            <div class=" imagine-card col-3  d-flex align-items-center  ">
+        <div class="row mt-1 mb-5 justify-content-center m-3 ">
+            <div class=" imagine-card   col-lg-3 d-flex align-items-center  ">
                 <i class="fa fa-user imagine-icon me-3"></i>
                 <div>
                     <h5 >DETAILED CONSULTATION</h5>
@@ -133,7 +138,7 @@
                 </div>
             </div>
 
-            <div class=" imagine-card col-3 d-flex align-items-center  ">
+            <div class=" imagine-card  col-lg-3 d-flex align-items-center  ">
                 <i class="fa fa-cog imagine-icon me-3"></i>
                 <div>
                     <h5 >PREMIUM MATERIALS</h5>
@@ -141,7 +146,7 @@
                 </div>
             </div>
 
-            <div class=" imagine-card col-3 d-flex align-items-center ">
+            <div class=" imagine-card col-lg-3  d-flex align-items-center ">
                 <i class="fa fa-clock-o imagine-icon me-3"></i>
                 <div>
                     <h5 >ON-TIME DELIVERY</h5>

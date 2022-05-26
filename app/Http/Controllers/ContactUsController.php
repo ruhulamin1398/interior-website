@@ -17,18 +17,21 @@ class ContactUsController extends Controller
         $validatedData = $request->validate([
             'name' => ['required'],
             'email' => ['required'],
+            'phone' => ['required'],
             'message' => ['required'],
+
         ]);
 
         $contactUsMail =[
 
             'name' => $request->name,
             'email' => $request->email,
+            'phone'=> $request->phone,
             'message' => $request->message,
 
             ];
 
-            Mail::to('contact@abasas.tech')->send(new ContactUsMail($contactUsMail));
+            Mail::to('rafaatabtahe@gmail.com')->send(new ContactUsMail($contactUsMail));
           
   return back()->with('success','Thanks For your Message');
     } 

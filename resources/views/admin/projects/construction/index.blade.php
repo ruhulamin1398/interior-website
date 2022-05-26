@@ -30,7 +30,7 @@
                         <th class="nk-tb-col"><span class="sub-text">Serial</span></th>
 
                         <th class="nk-tb-col"><span class="sub-text">Title</span></th>
-                        <th class="nk-tb-col tb-col-mb"><span class="sub-text">Service</span></th>
+                        <th class="nk-tb-col tb-col-mb"><span class="sub-text">Status</span></th>
                         <th class="nk-tb-col tb-col-mb"><span class="sub-text">Short Description</th>
                         <th class="nk-tb-col tb-col-mb"><span class="sub-text">Pictures</th>
 
@@ -53,7 +53,15 @@
                         </td>
 
                         <td class="nk-tb-col tb-col-md">
-                            <span class="tb-lead">{{$details->subcategory_id}}</span>
+                            <span class="tb-lead">
+                                @if ($details->status ==0 )
+                                Upcoming
+                                @elseif ($details->status == 1 )
+                                Ongoing
+                                @elseif ($details->status == 2 )
+                                Delivered
+                                @endif
+                            </span>
                         </td>
 
                         <td class="nk-tb-col tb-col-md">

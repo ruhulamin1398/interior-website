@@ -38,6 +38,20 @@
                     @endif
                 </div>
             </div>
+
+            
+            <div class="form-group">
+                <label class="form-label" for="full-name">Project Status</label>
+                <div class="form-control-wrap">
+                    <select name="projectStatus" class="form-control">
+                    <option value="0">Upcoming</option>
+                    <option value="1">Ongoing</option>
+                    <option value="2">Delivered</option>
+                    </select>
+                </div>
+            </div>
+
+
             <div class="form-group">
                 <label class="form-label" for="full-name">Serial</label>
                 <div class="form-control-wrap">

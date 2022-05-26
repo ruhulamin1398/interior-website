@@ -27,34 +27,47 @@
     <link rel="stylesheet" href="{{asset('theme/frontend/quote.css')}}">
     <link rel="stylesheet" href="{{asset('theme/frontend/responsive.css')}}">
 
+    @yield('pageTitle')
 
-    <title>Karigor Interior BD - Home</title>
+
+
+
 </head>
 
 <body>
     <!-- header start -->
     <div class="header">
         <!-- topbar start -->
-        <div class="topbar container-fluid d-flex flex-wrap justify-content-center justify-content-lg-between position-static">
-            <div class="info-topbar mt-2 d-flex flex-wrap justify-content-center justify-content-lg-between">
-                <div class="info-content d-inline-flex">
-                    <div class="mt-1"><span class="icon-phone-alt"></span></div>
-                    <p class="phone ms-2">+88 01611-103410, +88 01972-103410</p>
-                </div>
-
-                <div class="info-content ms-4 d-inline-flex">
-                    <div class="mt-1"><span class="icon-envelope"></span></div>
-                    <p class="email ms-2">karigorint@gmail.com</p>
-                </div>
+        <div class="topbar container-fluid d-flex flex-wrap justify-content-center justify-content-sm-between">
+            <div class="info-content mt-2">
+                <p class="phone info-content">+88 01611-103410, +88 01972-103410</p>
             </div>
 
-            <div class="location-topbar ms-3 mt-2 d-flex align-items-center">
+
+            <div class="info-content mt-2">
+                <p class="email">karigorint@gmail.com</p>
+
+            </div>
+
+            <div class="location-topbar mt-2">
                 <p>Beg Tower(1st floor), Naiorpool, Sylhet</p>
             </div>
         </div>
         <!-- topbar end -->
 
-        @include('frontend.include.navbar')
+        <!-- navbar start -->
+
+
+        <div id="navbar">
+            @include('frontend.include.navbar')
+        </div>
+
+
+
+        <!-- navbar end -->
+
+
+
 
 
     </div>
@@ -78,11 +91,10 @@
                     <h5>Contact <span>info</span></h5>
 
                     <div class="contact-info">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate commodi quisquam eius
-                            fugiat vero quidem atque.</p>
+                       
                         <div class="info-area">
                             <h6>Main office</h6>
-                            <p>Beg Tower(1st floor), Naiorpool, Sylhet.</p>
+                            <p>Beg Tower(1st floor). Naiorpool, Opposite of Naiorpool Mosque, Sylhet Division (3100), Bangladesh</p>
                         </div>
 
                         <div class="info-area pt-3">
@@ -134,6 +146,8 @@
 
     <!-- custom js link -->
     <script src="{{asset('theme/frontend/script.js')}}"></script>
+
+
 </body>
 
 </html>

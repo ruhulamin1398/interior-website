@@ -12,7 +12,7 @@
 </div>
 <div class="card card-bordered h-100">
     <div class="card-inner">
-    <form action="{{ route('projectinterior.update',$projectList->id) }}" method="post">
+        <form action="{{ route('projectinterior.update',$projectList->id) }}" method="post">
             @csrf
             @method('PUT')
             <div class="form-group">
@@ -32,7 +32,7 @@
                         @foreach($serviceList as $list)
 
                         @if($list->id == $projectList->subcategory_id)
-                        <option value="{{$list->id}}"selected="selected">{{$list->title}}</option>
+                        <option value="{{$list->id}}" selected="selected">{{$list->title}}</option>
                         @else
                         <option value="{{$list->id}}">{{$list->title}}</option>
                         @endif
@@ -41,6 +41,21 @@
                     @if($errors->has('title'))
                     <span class="text-danger ">{{ $errors->first('sub_category_id') }}</span>
                     @endif
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="form-label" for="full-name">Project Status</label>
+                <div class="form-control-wrap">
+                    <select name="projectStatus" class="form-control">
+
+
+                    <option value="0"{{$projectList->status == 0 ? 'selected': ''}}>Upcoming</option>
+                    <option value="1"{{$projectList->status == 1 ? 'selected': ''}}>Ongoing</option>
+                    <option value="2"{{$projectList->status == 2 ? 'selected': ''}}>Delivered</option>
+
+                    </select>
                 </div>
             </div>
 
@@ -61,12 +76,12 @@
                 </div>
             </div>
 
-            
+
             <div class="form-group">
                 <label class="form-label" for="full-name">Long Description</label>
                 <div class="form-control-wrap">
-                    
-                    <textarea id="summernote" name="long_description" class="form-control" >{{$projectList->description}}</textarea>
+
+                    <textarea id="summernote" name="long_description" class="form-control">{{$projectList->description}}</textarea>
                     @if($errors->has('title'))
                     <span class="text-danger ">{{ $errors->first('long_description') }}</span>
                     @endif
@@ -86,16 +101,16 @@
 
 @section('js')
 <script>
-$(document).ready(function() {
-$('#summernote').summernote({
-        placeholder: 'Write here a description',
-        tabsize: 2,
-        height: 200
-      });
+    $(document).ready(function() {
+        $('#summernote').summernote({
+            placeholder: 'Write here a description',
+            tabsize: 2,
+            height: 200
+        });
 
-// var serviceList = @json($serviceList);
-// console.log(serviceList);
+        // var serviceList = @json($serviceList);
+        // console.log(serviceList);
 
-});
+    });
 </script>
 @endsection

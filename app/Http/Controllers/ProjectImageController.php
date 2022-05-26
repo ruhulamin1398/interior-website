@@ -19,6 +19,8 @@ class ProjectImageController extends Controller
         $projectTitle = $request->title;
         $imageList = ProjectImage::where('project_id',$projectID)->get();
 
+       
+
         return view('admin.projects.interior.image.index',compact('projectID','imageList','projectTitle'));
     }
 

@@ -2,47 +2,73 @@
 AOS.init();
 
 // navbar animation
-let header = document.querySelector('.header');
-let carousel = document.querySelector('.carousel');
-let breadCrumb = document.querySelector('.breadcrumb-area');
-let topbar = document.querySelector('.topbar');
 
-window.onscroll = () => {
-    let scrollTop = document.documentElement.scrollTop;
 
-    if (scrollTop > header.offsetHeight) {
-        header.classList.add('active');
-        topbar.classList.add('d-none');
 
-        if (carousel !== null) {
-            carousel.style.marginTop = header.offsetHeight + 'px';
-        } else if (breadCrumb !== null) {
-            breadCrumb.style.marginTop = header.offsetHeight + 'px';
-        }
+window.onscroll = function () { myFunction() };
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
     } else {
-        header.classList.remove('active');
-        topbar.classList.remove('d-none');
-
-
-        if (carousel !== null) {
-            carousel.style.marginTop = 0 + 'px';
-        } else if (breadCrumb !== null) {
-            breadCrumb.style.marginTop = 0 + 'px';
-        }
+        navbar.classList.remove("sticky");
     }
 }
+
+// let header = document.querySelector('.header');
+// let carousel = document.querySelector('.carousel');
+// let breadCrumb = document.querySelector('.breadcrumb-area');
+// let topbar = document.querySelector('.topbar');
+
+// window.onscroll = () => {
+//     let scrollTop = document.documentElement.scrollTop;
+
+//     if (scrollTop > header.offsetHeight) {
+//         header.classList.add('active');
+//         topbar.classList.add('d-none');
+
+//         if (carousel !== null) {
+//             carousel.style.marginTop = header.offsetHeight + 'px';
+//         } else if (breadCrumb !== null) {
+//             breadCrumb.style.marginTop = header.offsetHeight + 'px';
+//         }
+//     } else {
+//         header.classList.remove('active');
+//         topbar.classList.remove('d-none');
+
+
+//         if (carousel !== null) {
+//             carousel.style.marginTop = 0 + 'px';
+//         } else if (breadCrumb !== null) {
+//             breadCrumb.style.marginTop = 0 + 'px';
+//         }
+//     }
+// }
 
 // selecting filter menu and filter items
 let filterMenu = document.querySelectorAll('.filter-menu li');
 let filterContents = document.querySelectorAll('.filter-content');
- 
 
-// delete construction projects
+
+// delete construction projects on loaded
 for (let i = 0; i < filterContents.length; i++) {
     if (filterContents[i].getAttribute('data-item') === 'construction') {
         filterContents[i].classList.add('deleteContents');
     }
 }
+
+// delete All projects on Load
+for (let i = 0; i < filterContents.length; i++) {
+    if (filterContents[i].getAttribute('data-item') === 'interior-home') {
+        filterContents[i].classList.add('deleteContents');
+    }
+}
+
+
+
 
 // filter construction and interior projects
 for (let i = 0; i < filterMenu.length; i++) {
@@ -77,6 +103,8 @@ let lightBoxImage = document.querySelector('.image-wrapper img');
 let lightBoxShadow = document.querySelector('.lightbox-shadow');
 let controlScrolling = document.querySelector('body');
 
+
+
 let leftArrow = document.querySelector('#left-arrow');
 let rightArrow = document.querySelector('#right-arrow');
 
@@ -88,6 +116,9 @@ if (closeBtn !== null) {
         controlScrolling.style.overflow = 'auto';
     }
 }
+
+
+
 
 for (let i = 0; i < filterContents.length; i++) {
     // lightbox show, slide, close
@@ -104,7 +135,10 @@ for (let i = 0; i < filterContents.length; i++) {
             controlScrolling.style.overflow = 'hidden';
         } else {
             // go to project page
-            // window.location = "project.html";
+
+            let projectID = filterContents[i].getAttribute('data-projectid');
+
+            window.location = "project/gallery/" + projectID;
         }
 
         // slide image
@@ -178,11 +212,34 @@ for (let i = 0; i < filterContents.length; i++) {
 }
 
 // service gallery
-// let galleryContent = document.querySelectorAll('.service-gallery-content');
 
-// for (let i = 0; i < galleryContent.length; i++) {
+let galleryContent = document.querySelectorAll('.service-gallery-content');
+
+for (let i = 0; i < galleryContent.length; i++) {
     // when onclick then go to project page
-//     galleryContent[i].onclick = () => {
-//         window.location = "project.html";
-//     }
-// }
+    galleryContent[i].onclick = () => {
+
+        let projectID = galleryContent[i].getAttribute('data-projectid');
+
+        window.location = "project/gallery/" + projectID;
+    }
+}
+
+// Constrcuction section Clickable
+let serviceClickCons = document.querySelectorAll('.construction-text');
+
+for (let i = 0; i < serviceClickCons.length; i++) {
+    serviceClickCons[i].onclick = () => {
+        window.location = "/construction-service";
+    }
+}
+
+// Interior Section Clickable
+
+let serviceClickInterior = document.querySelectorAll('.interior-text');
+
+for (let i = 0; i < serviceClickInterior.length; i++) {
+    serviceClickInterior[i].onclick = () => {
+        window.location = "/interior-service";
+    }
+}
