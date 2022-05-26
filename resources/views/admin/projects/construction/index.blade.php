@@ -13,7 +13,7 @@
         <div class="card card-bordered">
 
             <div class="card-inner ">
-                <h5 class="card-title float-left mt-1 ">Service Interior List</h5>
+                <h5 class="card-title float-left mt-1 ">Project Construction List</h5>
 
                 <a href="{{route('project.create')}}" class="btn btn-primary float-right"><em class="icon ni ni-file-docs"></em><span class="ml-1">Add Project Construction</span></a>
 
