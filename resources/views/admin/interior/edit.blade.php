@@ -17,7 +17,7 @@
             @csrf
             @method('PUT')
             <div class="form-group">
-                <label class="form-label" for="full-name">Interior Project Title</label>
+                <label class="form-label" for="full-name">Interior Service Title</label>
                 <div class="form-control-wrap">
                     <input type="text" class="form-control" name="title" value="{{$serviceInteriorEdit->title}}">
                     @if($errors->has('title'))

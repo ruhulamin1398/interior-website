@@ -16,7 +16,7 @@
         <form action="{{ route('interior.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
-                <label class="form-label" for="full-name">Interior Project Title</label>
+                <label class="form-label" for="full-name">Interior service Title</label>
                 <div class="form-control-wrap">
                     <input type="text" class="form-control" name="title">
                     @if($errors->has('title'))

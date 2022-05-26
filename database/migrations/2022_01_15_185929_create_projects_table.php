@@ -23,6 +23,7 @@ class CreateProjectsTable extends Migration
             $table->longText('description')->nullable();
             $table->text('short_description')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

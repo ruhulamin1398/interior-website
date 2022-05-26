@@ -45,7 +45,7 @@
                     <select name="projectStatus" class="form-control">
                     <option value="0">Upcoming</option>
                     <option value="1">Ongoing</option>
-                    <option value="2">Delivered</option>
+                    <option value="2">Completed</option>
                     </select>
                 </div>
             </div>

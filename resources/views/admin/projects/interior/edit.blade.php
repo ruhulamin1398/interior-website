@@ -53,7 +53,7 @@
 
                     <option value="0"{{$projectList->status == 0 ? 'selected': ''}}>Upcoming</option>
                     <option value="1"{{$projectList->status == 1 ? 'selected': ''}}>Ongoing</option>
-                    <option value="2"{{$projectList->status == 2 ? 'selected': ''}}>Delivered</option>
+                    <option value="2"{{$projectList->status == 2 ? 'selected': ''}}>Completed</option>
 
                     </select>
                 </div>

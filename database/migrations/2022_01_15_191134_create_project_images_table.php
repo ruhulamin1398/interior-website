@@ -18,6 +18,7 @@ class CreateProjectImagesTable extends Migration
             $table->foreignid('project_id')->constrained('projects');
             $table->string('image')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

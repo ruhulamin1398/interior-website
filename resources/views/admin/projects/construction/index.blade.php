@@ -59,7 +59,7 @@
                                 @elseif ($details->status == 1 )
                                 Ongoing
                                 @elseif ($details->status == 2 )
-                                Delivered
+                                Completed
                                 @endif
                             </span>
                         </td>

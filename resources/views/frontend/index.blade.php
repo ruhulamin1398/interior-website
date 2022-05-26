@@ -235,7 +235,7 @@
 
                         <span class="text-primary">Ongoing</span>
                         @elseif ($project->status == 2 )
-                        <span class="text-success">Delivered </span>
+                        <span class="text-success">Completed </span>
                         @endif
 
 
@@ -263,7 +263,7 @@
 
                         <span class="text-primary">Ongoing</span>
                         @elseif ($project->status == 2 )
-                        <span class="text-success">Delivered </span>
+                        <span class="text-success">Completed </span>
                         @endif
                     </p>
                 </div>
@@ -290,7 +290,7 @@
 
                         <span class="text-primary">Ongoing</span>
                         @elseif ($project->status == 2 )
-                        <span class="text-success">Delivered </span>
+                        <span class="text-success">Completed </span>
                         @endif
 
                     </p>

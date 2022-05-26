@@ -19,6 +19,7 @@ class CreateSubCategoriesTable extends Migration
             $table->text('title')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
