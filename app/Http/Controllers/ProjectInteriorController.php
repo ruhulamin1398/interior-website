@@ -43,8 +43,8 @@ class ProjectInteriorController extends Controller
         $this->validate($request, [
             'title'    => 'required',
             'sub_category_id' => 'required',
-            'short_description' => 'required',
-            'long_description' => 'required',
+            // 'short_description' => 'required',
+            // 'long_description' => 'required',
         ], [
             'title.required'     => 'Please Enter Project Title',
             'sub_category_id.required' => 'Please Select A Service',
@@ -56,7 +56,10 @@ class ProjectInteriorController extends Controller
         $service->title = $request->title;
         $service->short_description = $request->short_description;
         $service->description = $request->long_description;
-        $service->serial = $request->serial;
+        if($service->serial){
+            $service->serial = $request->serial;
+        }
+     
         $service->subcategory_id = $request->sub_category_id;
         $service->status = $request->projectStatus;
         $service->category_id = '1';
@@ -103,7 +106,9 @@ class ProjectInteriorController extends Controller
         $service->title = $request->title;
         $service->short_description = $request->short_description;
         $service->description = $request->long_description;
-        $service->serial = $request->serial;
+        if($service->serial){
+            $service->serial = $request->serial;
+        }
         $service->subcategory_id = $request->sub_category_id;
         $service->status = $request->projectStatus;
         $service->update();
