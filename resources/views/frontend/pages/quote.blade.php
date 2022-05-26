@@ -27,21 +27,21 @@
                 <div class="row">
 
                     <div class="mb-4 col-md-6 col-sm-12">
-                        <input required type="text" name="name" placeholder="Your Name" class="form-control">
+                        <input required type="text" name="name" placeholder="Your Name" class="m-2 form-control  form-control-lg">
                     </div>
                     @if($errors->has('name'))
                     <span class="text-danger mt-2 ">{{ $errors->first('name') }}</span>
                     @endif
 
                     <div class="mb-4 col-md-6 col-sm-12">
-                        <input required type="email" name="email" placeholder="Your Email" class="form-control">
+                        <input required type="email" name="email" placeholder="Your Email" class="m-2 form-control  form-control-lg">
                     </div>
                     @if($errors->has('email'))
                     <span class="text-danger mt-2 ">{{ $errors->first('email') }}</span>
                     @endif
 
                     <div class="mb-4 col-md-6 col-sm-12">
-                        <input required type="text" name="phone" placeholder="Phone Number" class="form-control">
+                        <input required type="text" name="phone" placeholder="Phone Number" class=" m-2 form-control  form-control-lg">
                     </div>
 
                     @if($errors->has('phone'))
@@ -49,13 +49,13 @@
                     @endif
 
                     <div class="mb-4 col-md-6 col-sm-12">
-                        <select class="form-select" name="projecttype" aria-label="Default select example">
+                        <select class="form-select m-2   form-select-lg" name="projecttype" aria-label="Default select example">
                             <option value="Interior" selected>Interior</option>
                             <option value="Construction">Construction</option>
                         </select>
                     </div>
 
-                    <div class="mb-4 col-md-3 col-sm-12">
+                    <div class="my-4 col-md-12 col-sm-12">
                         <label class="mb-2 text-capitalize radio-label"> <b>What is your estimated budget for this project?*</b> </label>
 
                         <div class="form-check">
@@ -97,7 +97,7 @@
 
 
 
-                    <div class="mb-4 col-md-3 col-sm-12">
+                    <div class="mb-4 col-md-12 col-sm-12">
                         <label class="mb-2 text-capitalize radio-label "> <b>Is there a particular deadline for this project?*</b> </label>
 
                         <div class="form-check">
@@ -116,7 +116,7 @@
                     </div>
 
 
-                    <div class="mb-4 col-md-3 col-sm-12">
+                    <div class="mb-4 col-md-12 col-sm-12">
                         <label class="mb-2 text-capitalize radio-label"> <b>What is the best way to contact you?*</b> </label>
 
                         <div class="form-check">
@@ -134,7 +134,7 @@
 
                     </div>
 
-                    <div class="mb-4 col-md-3 col-sm-12">
+                    <div class="mb-4 col-md-12 col-sm-12">
                         <label class="mb-2 text-capitalize radio-label "> <b>Have you worked with a professional interior design firm before?*</b> </label>
 
                         <div class="form-check">
