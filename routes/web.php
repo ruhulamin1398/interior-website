@@ -67,13 +67,13 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/user/logout', [ManageUserController::class, 'logout'])->name('logout');
 
 
-Route::middleware(['auth:sanctum', 'role:super-admin'])->group(function () {
+Route::group(['prefix' => 'admin', 'middleware'=>['auth:sanctum', 'role:super-admin']],function () {
 
     Route::resource('/user/management', ManageUserController::class);
 });
 
 
-Route::middleware(['auth:sanctum', 'role:super-admin|admin'])->group(function () {
+Route::group(['prefix' => 'admin', 'middleware'=>['auth:sanctum', 'role:super-admin|admin']], function () {
 
 
     Route::resource('/service/interior', ServiceInteriorController::class);

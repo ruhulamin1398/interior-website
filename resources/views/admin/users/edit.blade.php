@@ -6,7 +6,7 @@
         <div class="card-head">
             <h5 class="card-title">Update User Informations</h5>
         </div>
-        <form action="{{url('user/management/'.$users->id)}}" method="POST">
+        <form action="{{url('admin/user/management/'.$users->id)}}" method="POST">
             @csrf
             @method('PUT')
             <div class="row g-4">

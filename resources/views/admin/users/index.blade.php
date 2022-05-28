@@ -114,7 +114,7 @@
                         <td class="nk-tb-col nk-tb-col-tools">
                             <ul class="nk-tb-actions gx-1">
                                 <li>
-                                    <a href="{{url('user/management/'.$user->id.'/edit')}}" class="btn btn-trigger btn-icon" data-toggle="tooltip" data-placement="top" title="Edit">
+                                    <a href="{{url('admin/user/management/'.$user->id.'/edit')}}" class="btn btn-trigger btn-icon" data-toggle="tooltip" data-placement="top" title="Edit">
 
                                     <em class="icon ni ni-edit-alt-fill "></em>
                                     </a>
