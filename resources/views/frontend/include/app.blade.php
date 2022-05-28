@@ -94,7 +94,9 @@
                        
                         <div class="info-area">
                             <h6>Main office</h6>
-                            <p>Beg Tower(1st floor). Naiorpool, Opposite of Naiorpool Mosque, Sylhet Division (3100), Bangladesh</p>
+                            <p>
+                                Beg Tower(1st floor). Naiorpool, Opposite of Naiorpool Mosque. 3100 Sylhet, Sylhet Division, Bangladesh
+                            </p>
                         </div>
 
                         <div class="info-area pt-3">
