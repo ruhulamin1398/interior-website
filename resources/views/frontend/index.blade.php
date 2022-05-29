@@ -105,7 +105,7 @@
 
 
 <!-- service row start (construction) -->
-<div id="construction" class="container-lg pt-4 pb-5" data-aos="fade-up" data-aos-duration="700">
+<div id="construction" class="container-lg pt-md-4 pb-md-5" data-aos="fade-up" data-aos-duration="700">
     <div class="service-row construction-content pt-4 pb-4">
         <div class="service-row-img">
             <img loading="lazy" src="{{asset('theme/frontend/img/construction.jpg')}}" alt="">
@@ -124,7 +124,7 @@
 
 
 <!-- service row start (interior) -->
-<div id="interior" class="container-lg pt-4 mb-5 pb-5" data-aos="fade-up" data-aos-duration="700">
+<div id="interior" class="container-lg pt-md-4 mb-md-5 pb-md-5" data-aos="fade-up" data-aos-duration="700">
     <div class="service-row interior-content pt-4 pb-4">
         <div class="service-row-img">
             <img loading="lazy" src="{{asset('theme/frontend/img/interior.jpg')}}" alt="">
@@ -145,10 +145,10 @@
 <!-- Core values start -->
 
 
-<section id="core-values-section mb-5  mt-5">
+<section id="core-values-section mb-md-5  mt-md-5">
 
     <div class="container">
-        <div class="section-title mb-5 pb-4">
+        <div class="section-title mb-md-5 pb-md-4">
             <h1>Our<span> Core Values</span></h1>
         </div>
 
@@ -157,26 +157,26 @@
 
         <div class="row " data-aos="fade-up">
             <div class="card-group">
-                <div class="col-md-4 mb-4 core-values  p-2">
+                <div class="col-md-4 mb-md-4 core-values  p-2">
                     <div class="card w-100  pt-4 ps-2">
                         <div class="card-body">
-                            <h3 class="mb-5 fw-bold card-title"><span>P</span>EOPLE<h3>
+                            <h3 class="mb-md-5 fw-bold card-title"><span>P</span>EOPLE<h3>
                                     <p class="card-text">We conduct our business to the highest ethical standards and take responsibility for our actions.</p>
                         </div>
 
                     </div>
                 </div>
-                <div class="col-md-4  mb-4 core-values p-2">
-                    <div class="card w-100  pt-4 ps-2">
+                <div class="col-md-4  mb-md-4 core-values p-2">
+                    <div class="card w-100  pt-md-4 ps-2">
                         <div class="card-body">
-                            <h3 class="mb-5 fw-bold card-title"><span>I</span>NTEGRITY<h3>
+                            <h3 class="mb-md-5 fw-bold card-title"><span>I</span>NTEGRITY<h3>
                                     <p class="card-text">We care for the well-being of our people and help them grow in their ability to be successful.</p>
                         </div>
 
                     </div>
                 </div>
-                <div class="col-md-4 mb-4 core-values p-2">
-                    <div class="card w-100  pt-4 ps-2">
+                <div class="col-md-4 mb-md-4 core-values p-md-2">
+                    <div class="card w-100  pt-md-4 ps-2">
                         <div class="card-body">
                             <h3 class="mb-5 fw-bold card-title"><span>E</span>XCELLENCE<h3>
                                     <p class="card-text">We commit to excellence in all we do with a focus on quality and continuous improvement.</p>
@@ -202,7 +202,7 @@
 
 
 <!-- exclusive project gallery start -->
-<div class="container-xxl gallery pt-5 mt-5" id="project-gallery">
+<div class="container-xxl gallery pt-md-5 mt-md-5" id="project-gallery">
     <div class="section-title">
         <h1>Exclusive<span> Projects</span></h1>
     </div>

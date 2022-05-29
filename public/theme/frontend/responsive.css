@@ -316,6 +316,9 @@
         transform: translate(2%, 12%);
     }
 
+    .carousel-indicators{
+        display: none !important;
+    }
     .carousel-item {
         position: relative;
        height: 75%;
@@ -335,7 +338,7 @@
         font-size: 1.1rem;
     }
     #services{
-        margin-top: -20vw;
+        margin-top: -40vw;
     }
     .info-content .email {
         margin-top: -5vw;
