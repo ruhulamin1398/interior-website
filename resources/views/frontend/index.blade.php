@@ -75,7 +75,7 @@
         <p class="text-center">What we do</p>
     </div>
 
-    <div class="container-lg pt-4 pb-5 d-flex flex-wrap justify-content-center justify-content-lg-start" data-aos="fade-up" data-aos-duration="700">
+    <div class="container-lg pt-4 pb-5 d-flex flex-wrap justify-content-center justify-content-lg-start" data-aos="fade-up" data-aos-duration="700" style="display:none !important;">
         <div class="card mb-5 ms-2 me-2 flex-grow-1 ">
 
             <img loading="lazy" src="{{asset('theme/frontend/img/service-01.jpg')}}" alt="">
