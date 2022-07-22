@@ -14,29 +14,29 @@
                 <div class="main-menu collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{route('home-index')}}">Home</a>
+                            <a class="nav-link  home" aria-current="page" href="{{route('home-index')}}">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('about-us')}}">About Us</a>
+                            <a class="nav-link about-us " href="{{route('about-us')}}">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('front.brand')}}">Our Clients</a>
+                            <a class="nav-link clients" href="{{route('front.brand')}}">Our Clients</a>
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle interior-service construction-service " href="#" data-bs-toggle="dropdown"
                                 id="navbarDropdownMenuLink" role="button" aria-expanded="false">
                                 Our Services
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="{{route('front-interior')}}">Interior</a></li>
-                                <li><a class="dropdown-item" href="{{route('front-cons')}}">Construction</a></li>
+                            <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item interior-service" href="{{route('front-interior')}}">Interior</a></li>
+                                <li><a class="dropdown-item construction-service " href="{{route('front-cons')}}">Construction</a></li>
                             </ul>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('contact-us')}}">Contact Us</a>
+                            <a class="nav-link contact-us" href="{{route('contact-us')}}">Contact Us</a>
                         </li>
                     </ul>
                 </div>

@@ -243,3 +243,25 @@ for (let i = 0; i < serviceClickInterior.length; i++) {
         window.location = "/interior-service";
     }
 }
+
+
+
+
+$(document).ready(function() {
+    // $('.active').removeClass('active');
+    console.log(  $('active')); 
+    var pathName= location.pathname;
+    // alert(pathName)
+    if(pathName=="\/"){
+        $('.home').addClass('active');
+        
+        }
+ else{
+    pathName =  pathName.replace('\/', '') ;
+    // alert(pathName)
+    $('.'+pathName).addClass('active');
+  
+ }
+
+
+  });

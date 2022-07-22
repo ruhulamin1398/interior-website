@@ -35,7 +35,7 @@
     <div class="container d-flex flex-wrap  justify-content-md-center" data-aos="fade-up">
 
         @foreach($brandImages as $image)
-        <div class="col-lg-3 m-4 client-image" >
+        <div class="col-lg-3 p-4 client-image" >
             <img  src="/brand/picture/{{$image->image}}" height="200px" width="230px"  alt="" class="mt-5">
 
             
