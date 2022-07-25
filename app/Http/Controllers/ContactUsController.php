@@ -3,16 +3,24 @@
 namespace App\Http\Controllers;
 
 use App\Mail\ContactUsMail;
+use App\Models\ContactUs;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\DB;
 
 class ContactUsController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         return view('frontend.pages.contactus');
     }
+    public function indexBackend()
+    {
+        $contactUsData = ContactUs::get();
+        return view('admin.contactUs.index', compact('contactUsData'));
+    }
 
-    public function ContactUsmail(Request $request){
+    public function ContactUsmail(Request $request)
+    {
 
         $validatedData = $request->validate([
             'name' => ['required'],
@@ -22,17 +30,9 @@ class ContactUsController extends Controller
 
         ]);
 
-        $contactUsMail =[
+        DB::table('contact_us')->insert($validatedData);
 
-            'name' => $request->name,
-            'email' => $request->email,
-            'phone'=> $request->phone,
-            'message' => $request->message,
+        return back()->with('success', 'Thanks For your Message We will Contact You Soon.');
 
-            ];
-
-            Mail::to('rafaatabtahe@gmail.com')->send(new ContactUsMail($contactUsMail));
-          
-  return back()->with('success','Thanks For your Message');
-    } 
+    }
 }

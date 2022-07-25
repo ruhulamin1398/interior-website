@@ -7,10 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- bootstrap cdn link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- animate css cdn link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- aos cdn link -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -40,17 +43,17 @@
         <!-- topbar start -->
         <div class="topbar container-fluid d-flex flex-wrap justify-content-center justify-content-sm-between">
             <div class="info-content mt-2">
-                <p class="phone info-content">+88 01611-103410, +88 01972-103410</p>
+                <p class="phone info-content">{{ App\Models\textContent::find(6)->text; }}</p>
             </div>
 
 
             <div class="info-content mt-2">
-                <p class="email">karigorint@gmail.com</p>
+                <p class="email">{{ App\Models\textContent::find(7)->text; }}</p>
 
             </div>
 
             <div class="location-topbar mt-2">
-                <p>Beg Tower(1st floor), Naiorpool, Sylhet</p>
+                <p>{{ App\Models\textContent::find(8)->text; }}</p>
             </div>
         </div>
         <!-- topbar end -->
@@ -84,10 +87,10 @@
 
                 <div class="footer-col fb-page mb-5">
                     <h5>Follow us</h5>
-                    
-                    
 
-               
+
+
+
 
 
 
@@ -101,22 +104,22 @@
                     <h5>Contact <span>info</span></h5>
 
                     <div class="contact-info">
-                       
+
                         <div class="info-area">
                             <h6>Main office</h6>
                             <p>
-                                Beg Tower(1st floor). Naiorpool, Opposite of Naiorpool Mosque. 3100 Sylhet, Sylhet Division, Bangladesh
+                                {{ App\Models\textContent::find(8)->text; }}
                             </p>
                         </div>
 
                         <div class="info-area pt-3">
                             <h6>Phone</h6>
-                            <p>+88 01611-103410 | +88 01972-103410</p>
+                            <p> {{ App\Models\textContent::find(6)->text; }}</p>
                         </div>
 
                         <div class="info-area pt-3">
                             <h6>Email</h6>
-                            <p>karigorint@gmail.com</p>
+                            <p> {{ App\Models\textContent::find(7)->text; }}</p>
                         </div>
                     </div>
                 </div>
@@ -124,7 +127,9 @@
                 <div class="footer-col location">
                     <h5>Location</h5>
                     <div class="map-box">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.1097967310548!2d91.87623131495563!3d24.894236184038025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3751ab350093e955%3A0x8b3e8c778f8220f9!2sKarigor%20Interior%20BD!5e0!3m2!1sbn!2sbd!4v1641471123446!5m2!1sbn!2sbd" width="400" height="340" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.1097967310548!2d91.87623131495563!3d24.894236184038025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3751ab350093e955%3A0x8b3e8c778f8220f9!2sKarigor%20Interior%20BD!5e0!3m2!1sbn!2sbd!4v1641471123446!5m2!1sbn!2sbd"
+                            width="400" height="340" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
@@ -145,10 +150,12 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 
     <!-- bootstrap cdn link -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
 
 
@@ -162,7 +169,7 @@
 
 
     <script>
-    var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?62177';
+        var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?62177';
     var s = document.createElement('script');
     s.type = 'text/javascript';
     s.async = true;
@@ -196,7 +203,7 @@
     };
     var x = document.getElementsByTagName('script')[0];
     x.parentNode.insertBefore(s, x);
-</script>
+    </script>
 
 
 

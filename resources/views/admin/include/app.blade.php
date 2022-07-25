@@ -13,7 +13,9 @@
     <title>Dashboard</title>
     <!-- StyleSheets  -->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
- 
+
+
+
     <link rel="stylesheet" href="{{asset('theme/backend/assets/css/dashlite.css?ver=2.4.0')}}">
     <link id="skin-default" rel="stylesheet" href="{{asset('theme/backend/assets/css/theme.css?ver=2.4.0')}}">
 </head>
@@ -35,7 +37,7 @@
                     <div class="container-fluid">
                         <div class="nk-content-inner">
                             <div class="nk-content-body">
-                               @yield('admin')
+                                @yield('admin')
                             </div>
                         </div>
                     </div>
@@ -43,7 +45,7 @@
                 <!-- content @e -->
                 <!-- footer @s -->
                 <div class="nk-footer">
-                @include('admin.include.footer')
+                    @include('admin.include.footer')
                 </div>
                 <!-- footer @e -->
             </div>
@@ -53,6 +55,8 @@
     </div>
     <!-- app-root @e -->
     <!-- JavaScript -->
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/0e5659ef6a.js" crossorigin="anonymous"></script>
     <script src="{{asset('theme/backend/assets/js/bundle.js?ver=2.4.0')}}"></script>
     <script src="{{asset('theme/backend/assets/js/scripts.js?ver=2.4.0')}}"></script>
     <script src="{{asset('theme/backend/assets/js/charts/gd-default.js?ver=2.4.0')}}"></script>

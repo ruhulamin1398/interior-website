@@ -49,20 +49,7 @@ class DatabaseSeeder extends Seeder
            
                 
         ]);
-        DB::table('categories')->insert([
-
-            'category' => 'interior',
-           
-           
-                
-        ]);
-        DB::table('categories')->insert([
-
-            'category' => 'construction',
-           
-                
-        ]);
-
+  
         $this->call([
             AssingeRoleSeeder::class,
         ]);
@@ -94,22 +81,6 @@ class DatabaseSeeder extends Seeder
 
 
 
-
-
-
-
-
-
-
-
-
-        $sql='
-        INSERT INTO sub_categories ("id", "category_id","title","image","created_at","updated_at","deleted_at")
-        VALUES
-        ("1","2","Institute","Institute1653577956construction_image.jpg","2022-05-26 15:12:36","2022-05-26 15:12:36","2022-05-26 15:12:36")
-       
-    ';
-        DB::select($sql);
 
 
 
