@@ -77,3 +77,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum', 'role:super-
 
 Route::resource('text-contents', TextContentController::class);
 Route::resource('media-contents', MediaContentController::class);
+
+Route::get('contactUs', [ContactUsController::class, 'indexBackend'])->name('contact.us.admin');
+Route::get('quoteData', [QuoteController::class, 'index'])->name('quote.data');

@@ -15,6 +15,13 @@
 <section id="">
     <div class="container pt-5">
 
+        @if($message = Session::get('success'))
+        <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+            <strong class="text-center">{{ $message }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        @endif
+
         <div class="section-title mb-5">
             <h1>GET<span> A QUOTE</span></h1>
             <p>See how we can provide your premium furniture and solutions on-time and on-budget</p>
@@ -27,21 +34,24 @@
                 <div class="row">
 
                     <div class="mb-4 col-md-6 col-sm-12">
-                        <input required type="text" name="name" placeholder="Your Name" class="m-2 form-control  form-control-lg">
+                        <input required type="text" name="name" placeholder="Your Name"
+                            class="m-2 form-control  form-control-lg">
                     </div>
                     @if($errors->has('name'))
                     <span class="text-danger mt-2 ">{{ $errors->first('name') }}</span>
                     @endif
 
                     <div class="mb-4 col-md-6 col-sm-12">
-                        <input required type="email" name="email" placeholder="Your Email" class="m-2 form-control  form-control-lg">
+                        <input required type="email" name="email" placeholder="Your Email"
+                            class="m-2 form-control  form-control-lg">
                     </div>
                     @if($errors->has('email'))
                     <span class="text-danger mt-2 ">{{ $errors->first('email') }}</span>
                     @endif
 
                     <div class="mb-4 col-md-6 col-sm-12">
-                        <input required type="text" name="phone" placeholder="Phone Number" class=" m-2 form-control  form-control-lg">
+                        <input required type="text" name="phone" placeholder="Phone Number"
+                            class=" m-2 form-control  form-control-lg">
                     </div>
 
                     @if($errors->has('phone'))
@@ -49,37 +59,43 @@
                     @endif
 
                     <div class="mb-4 col-md-6 col-sm-12">
-                        <select class="form-select m-2   form-select-lg" name="projecttype" aria-label="Default select example">
+                        <select class="form-select m-2   form-select-lg" name="projecttype"
+                            aria-label="Default select example">
                             <option value="Interior" selected>Interior</option>
                             <option value="Construction">Construction</option>
                         </select>
                     </div>
 
                     <div class="my-4 col-md-12 col-sm-12">
-                        <label class="mb-2 text-capitalize radio-label"> <b>What is your estimated budget for this project?*</b> </label>
+                        <label class="mb-2 text-capitalize radio-label"> <b>What is your estimated budget for this
+                                project?*</b> </label>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="budget" id="budget1" value="1,00,000 - 5,00,000">
+                            <input class="form-check-input" type="radio" name="budget" id="budget1"
+                                value="1,00,000 - 5,00,000">
                             <label class="form-check-label" for="budget1">
                                 1,00,000 - 5,00,000
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="budget" id="budget2" value="5,00,000 - 10,00,000">
+                            <input class="form-check-input" type="radio" name="budget" id="budget2"
+                                value="5,00,000 - 10,00,000">
                             <label class="form-check-label" for="budget2">
                                 5,00,000 - 10,00,000
                             </label>
                         </div>
 
                         <div class="form-check ">
-                            <input class="form-check-input" type="radio" name="budget" id="budget3" value="10,00,000 - 20,00,000">
+                            <input class="form-check-input" type="radio" name="budget" id="budget3"
+                                value="10,00,000 - 20,00,000">
                             <label class="form-check-label" for="budget3">
                                 10,00,000 - 20,00,000
                             </label>
                         </div>
 
                         <div class="form-check ">
-                            <input class="form-check-input" type="radio" name="budget" id="budget4" value="20,00,000 - 50,00,000">
+                            <input class="form-check-input" type="radio" name="budget" id="budget4"
+                                value="20,00,000 - 50,00,000">
                             <label class="form-check-label" for="budget4">
                                 20,00,000 - 50,00,000
                             </label>
@@ -98,7 +114,8 @@
 
 
                     <div class="mb-4 col-md-12 col-sm-12">
-                        <label class="mb-2 text-capitalize radio-label "> <b>Is there a particular deadline for this project?*</b> </label>
+                        <label class="mb-2 text-capitalize radio-label "> <b>Is there a particular deadline for this
+                                project?*</b> </label>
 
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="deadline" id="ab1" value="Yes">
@@ -117,7 +134,8 @@
 
 
                     <div class="mb-4 col-md-12 col-sm-12">
-                        <label class="mb-2 text-capitalize radio-label"> <b>What is the best way to contact you?*</b> </label>
+                        <label class="mb-2 text-capitalize radio-label"> <b>What is the best way to contact you?*</b>
+                        </label>
 
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="contact" id="contact1" value="Phone">
@@ -135,7 +153,8 @@
                     </div>
 
                     <div class="mb-4 col-md-12 col-sm-12">
-                        <label class="mb-2 text-capitalize radio-label "> <b>Have you worked with a professional interior design firm before?*</b> </label>
+                        <label class="mb-2 text-capitalize radio-label "> <b>Have you worked with a professional
+                                interior design firm before?*</b> </label>
 
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="experience" id="experience1" value="Yes">
@@ -155,7 +174,7 @@
 
 
                     <div class="mb-4 col-12">
-                        <textarea class="form-control" name="message" placeholder="Your Message" rows="6" ></textarea>
+                        <textarea class="form-control" name="message" placeholder="Your Message" rows="6"></textarea>
                     </div>
 
 
@@ -163,9 +182,9 @@
 
                 <div class="col-md-12 text-center mt-3">
                     <button type="submit" class="btn btn-secondary quote-button ">Submit</button>
-                    </div>
+                </div>
 
-           
+
             </form>
         </div>
 

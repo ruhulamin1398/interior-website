@@ -76,6 +76,18 @@
                             <span class="nk-menu-text">Media Contents</span>
                         </a>
                     </li><!-- .nk-menu-item -->
+                    <li class="nk-menu-item">
+                        <a href="{{route('contact.us.admin')}}" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-shield-star-fill"></em></span>
+                            <span class="nk-menu-text">Contact Message</span>
+                        </a>
+                    </li><!-- .nk-menu-item -->
+                    <li class="nk-menu-item">
+                        <a href="{{route('quote.data')}}" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-shield-star-fill"></em></span>
+                            <span class="nk-menu-text">Quote</span>
+                        </a>
+                    </li><!-- .nk-menu-item -->
 
                     <li class="nk-menu-item">
                         <a href="{{route('view.brand')}}" class="nk-menu-link">
