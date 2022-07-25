@@ -15,7 +15,7 @@
         <div class="title">
             <h2>Our Services</h2>
         </div>
-<!-- 
+        <!-- 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{route('home-index')}}">Home</a></li>
@@ -35,7 +35,8 @@
         <p class="text-center">What we do</p>
     </div>
 
-    <div class="container-xl pt-4 pb-5 d-flex flex-wrap justify-content-center justify-content-lg-start" data-aos="fade-up">
+    <div class="container-xl pt-4 pb-5 d-flex flex-wrap justify-content-center justify-content-lg-start"
+        data-aos="fade-up">
 
         @foreach($interiorSerivce as $service)
         <div class="card mb-3 ms-2 me-2 flex-grow-1">
@@ -65,8 +66,20 @@
     <div class="service-gallery-wrapper mt-4">
         @foreach($interiorProjects as $project)
 
+
+
         <div class="service-gallery-content" data-projectID="{{$project->id}}">
-            <img loading="lazy" src="/project/picture/{{$project->images->first()->image}}" alt="">
+
+            <img loading="lazy" @if( $project->images->first())
+            src="/project/picture/{{ $project->images->first()->image }}"
+            @else
+
+            src="/project/picture/image-notFound.jpg"
+            
+            @endif
+            alt="">
+
+
 
             <div class="preview-details">
 

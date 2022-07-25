@@ -16,39 +16,63 @@
 
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
     </div>
 
     <div class="carousel-inner">
-        <div class="carousel-item carousel-item1 active">
+        @php
+        $slide_item_01 = App\Models\mediaContent::find(1)->media;
+        @endphp
+        <div class="carousel-item carousel-item1 active"
+            style="background: -o-linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('{{ asset('images/'.$slide_item_01) }}');
+        background: linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('{{ asset('images/'.$slide_item_01) }}');">
 
             <div class="carousel-caption d-block">
-                <h5 class="animate__animated animate__fadeInDown" style="animation-duration: 1.7s; animation-delay: 0.6s">We Create Spaces for better living</h5>
-                <p class="animate__animated animate__fadeInDown" style="animation-duration: 1.7s; animation-delay: 1.7s">
+                <h5 class="animate__animated animate__fadeInDown"
+                    style="animation-duration: 1.7s; animation-delay: 0.6s">We Create Spaces for better living</h5>
+                <p class="animate__animated animate__fadeInDown"
+                    style="animation-duration: 1.7s; animation-delay: 1.7s">
                     <a href="about.html">Learn More</a>
                 </p>
             </div>
         </div>
 
-        <div class="carousel-item carousel-item2">
+        @php
+        $slide_item_02 = App\Models\mediaContent::find(2)->media;
+        @endphp
+        <div class="carousel-item carousel-item2"
+            style="background: -o-linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('{{ asset('images/'.$slide_item_02) }}');
+        background: linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('{{ asset('images/'.$slide_item_02) }}');">
 
             <div class="carousel-caption d-block">
-                <h5 class="animate__animated animate__fadeInDown" style="animation-duration: 1.7s; animation-delay: 0.6s">Inspiring world with innovative space
+                <h5 class="animate__animated animate__fadeInDown"
+                    style="animation-duration: 1.7s; animation-delay: 0.6s">Inspiring world with innovative space
                     design</h5>
-                <p class="animate__animated animate__fadeInDown" style="animation-duration: 1.7s; animation-delay: 1.7s">
+                <p class="animate__animated animate__fadeInDown"
+                    style="animation-duration: 1.7s; animation-delay: 1.7s">
                     <a href="#">Learn More</a>
                 </p>
             </div>
         </div>
 
-        <div class="carousel-item carousel-item3">
+        @php
+        $slide_item_03 = App\Models\mediaContent::find(3)->media;
+        @endphp
+        <div class="carousel-item carousel-item3"
+            style="background: -o-linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('{{ asset('images/'.$slide_item_03) }}');
+        background: linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('{{ asset('images/'.$slide_item_03) }}');">
 
             <div class="carousel-caption d-block">
-                <h5 class="animate__animated animate__fadeInDown" style="animation-duration: 1.7s; animation-delay: 0.6s">Giving your home a modern and unique
+                <h5 class="animate__animated animate__fadeInDown"
+                    style="animation-duration: 1.7s; animation-delay: 0.6s">Giving your home a modern and unique
                     style</h5>
-                <p class="animate__animated animate__fadeInDown" style="animation-duration: 1.7s; animation-delay: 1.7s">
+                <p class="animate__animated animate__fadeInDown"
+                    style="animation-duration: 1.7s; animation-delay: 1.7s">
                     <a href="#">Learn More</a>
                 </p>
             </div>
@@ -75,10 +99,12 @@
         <p class="text-center">What we do</p>
     </div>
 
-    <div class="container-lg pt-4 pb-5 d-flex flex-wrap justify-content-center justify-content-lg-start" data-aos="fade-up" data-aos-duration="700" style="display:none !important;">
+    <div class="container-lg pt-4 pb-5 d-flex flex-wrap justify-content-center justify-content-lg-start"
+        data-aos="fade-up" data-aos-duration="700" style="display:none !important;">
         <div class="card mb-5 ms-2 me-2 flex-grow-1 ">
 
             <img loading="lazy" src="{{asset('theme/frontend/img/service-01.jpg')}}" alt="">
+
 
             <div class="card-text-content service-area">
                 <a href="{{route('front-interior')}}">
@@ -108,13 +134,19 @@
 <div id="construction" class="container-lg pt-md-4 pb-md-5" data-aos="fade-up" data-aos-duration="700">
     <div class="service-row construction-content pt-4 pb-4">
         <div class="service-row-img">
-            <img loading="lazy" src="{{asset('theme/frontend/img/construction.jpg')}}" alt="">
+            @php
+            $service_01_img = App\Models\mediaContent::find(4)->media;
+            @endphp
+            <img loading="lazy" src="{{ asset('images/'.$service_01_img) }}" alt="">
         </div>
 
         <div class="service-row-text construction-text">
             <h2>Construction</h2>
 
-            <p>Our construction recruitment specialists will work alongside you to develop and optimise an effective talent acquisition and pipeline strategy. Services include contract hire, direct hire and engaged search.</p>
+            <p>
+                {{ App\Models\textContent::find(1)->text; }}
+
+            </p>
             <p class="learn-more-btn"><a href="{{route('front-cons')}}">Learn more</a></p>
         </div>
     </div>
@@ -127,12 +159,15 @@
 <div id="interior" class="container-lg pt-md-4 mb-md-5 pb-md-5" data-aos="fade-up" data-aos-duration="700">
     <div class="service-row interior-content pt-4 pb-4">
         <div class="service-row-img">
-            <img loading="lazy" src="{{asset('theme/frontend/img/interior.jpg')}}" alt="">
+            @php
+            $service_02_img = App\Models\mediaContent::find(5)->media;
+            @endphp
+            <img loading="lazy" src="{{ asset('images/'.$service_02_img) }}" alt="">
         </div>
 
         <div class="service-row-text interior-text">
             <h2>Interiors</h2>
-            <p>Karigor will customize your home or business, Interior space according to your needs or desires. Whether we place a custom-mixed paint splash on a wall for you or rearrange your home or workspace with fabulous decorum and furniture, You will be amazed.</p>
+            <p> {{ App\Models\textContent::find(2)->text; }}</p>
             <p class="learn-more-btn"><a href="{{route('front-interior')}}">Learn more</a></p>
         </div>
     </div>
@@ -161,7 +196,7 @@
                     <div class="card w-100  pt-4 ps-2">
                         <div class="card-body">
                             <h3 class="mb-md-5 fw-bold card-title"><span>P</span>EOPLE<h3>
-                                    <p class="card-text">We conduct our business to the highest ethical standards and take responsibility for our actions.</p>
+                                    <p class="card-text"> {{ App\Models\textContent::find(3)->text; }}</p>
                         </div>
 
                     </div>
@@ -170,7 +205,7 @@
                     <div class="card w-100  pt-md-4 ps-2">
                         <div class="card-body">
                             <h3 class="mb-md-5 fw-bold card-title"><span>I</span>NTEGRITY<h3>
-                                    <p class="card-text">We care for the well-being of our people and help them grow in their ability to be successful.</p>
+                                    <p class="card-text"> {{ App\Models\textContent::find(4)->text; }}</p>
                         </div>
 
                     </div>
@@ -179,7 +214,7 @@
                     <div class="card w-100  pt-md-4 ps-2">
                         <div class="card-body">
                             <h3 class="mb-5 fw-bold card-title"><span>E</span>XCELLENCE<h3>
-                                    <p class="card-text">We commit to excellence in all we do with a focus on quality and continuous improvement.</p>
+                                    <p class="card-text"> {{ App\Models\textContent::find(5)->text; }}</p>
                         </div>
 
                     </div>
@@ -210,9 +245,9 @@
     <div class="wrapper">
         <ul class="filter-menu" data-aos="fade-up" data-aos-duration="500">
             <li data-list="allproject" class="active-menu">All</li>
-            <li data-list="interior-home" >Interior</li>
+            <li data-list="interior-home">Interior</li>
             <li data-list="construction">Construction</li>
-           
+
         </ul>
 
 
@@ -223,7 +258,12 @@
 
             <div class="filter-content " data-item="allproject" data-projectID="{{$project->id}}">
 
-                <img loading="lazy" src="/project/picture/{{$project->images->first()->image}}" alt="">
+                <img loading="lazy" @if ($project->images->first())
+                src="/project/picture/{{$project->images->first()->image}}"
+                @else
+                src="/project/picture/image-notFound.jpg"
+                @endif alt="">
+
                 <p class="hover-text ">{{$project->short_description}} </p>
                 <div class="project-title-area">
                     <p class="project-title">{{$project->title}}</p>
@@ -251,7 +291,11 @@
 
             <div class="filter-content" data-item="interior-home" data-projectID="{{$project->id}}">
 
-                <img loading="lazy" src="/project/picture/{{$project->images->first()->image}}" alt="">
+                <img loading="lazy" @if ($project->images->first())
+                src="/project/picture/{{$project->images->first()->image}}"
+                @else
+                src="/project/picture/image-notFound.jpg"
+                @endif alt="">
                 <p class="hover-text "> {{$project->short_description}} </p>
                 <div class="project-title-area">
                     <p class="project-title">{{$project->title}}</p>
@@ -276,7 +320,11 @@
             @foreach($constructionProjects as $project)
             <div class="filter-content" data-item="construction" data-projectID="{{$project->id}}">
 
-                <img loading="lazy" src="/project/picture/{{$project->images->first()->image}}" alt="">
+                <img loading="lazy" @if ($project->images->first())
+                src="/project/picture/{{$project->images->first()->image}}"
+                @else
+                src="/project/picture/image-notFound.jpg"
+                @endif alt="">
 
                 <p class="hover-text">{{$project->short_description}}</p>
                 <div class="project-title-area">
