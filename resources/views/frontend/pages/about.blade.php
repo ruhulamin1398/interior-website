@@ -30,7 +30,7 @@
     <div class="row mt-md-5  p-2">
         <div class="col-md-6">
             @php
-            $about_description = App\Models\mediaContent::find(6)->media;
+            $about_description = App\Models\MediaContent::find(6)->media;
             @endphp
             <img loading="lazy" class="about-us-img shadow" src="{{ asset('images/'.$about_description) }}" alt=""
                 height="400" width="650">
@@ -38,7 +38,7 @@
         <div class="col-md-6 ">
             <p class="pt-3 about-us-text">
                 @php
-                echo App\Models\textContent::find(9)->text;
+                echo App\Models\TextContent::find(9)->text;
                 @endphp
             </p>
         </div>
@@ -59,16 +59,16 @@
             <div class="col-md-4 mb-5 d-flex align-items-center justify-content-center">
                 <i class="fas fa-building why-choose-icons me-3"></i>
                 <div>
-                    <h4 class="mb-3 fw-bold">{{ App\Models\textContent::find(10)->title; }}</h4>
-                    <p>{{ App\Models\textContent::find(10)->text; }}</p>
+                    <h4 class="mb-3 fw-bold">{{ App\Models\TextContent::find(10)->title; }}</h4>
+                    <p>{{ App\Models\TextContent::find(10)->text; }}</p>
                 </div>
             </div>
             <div class="col-md-4 mb-5 d-flex align-items-center justify-content-center">
                 <i class="far fa-lightbulb why-choose-icons me-3"></i>
                 <div>
-                    <h4 class="mb-3 fw-bold">{{ App\Models\textContent::find(11)->title; }}
+                    <h4 class="mb-3 fw-bold">{{ App\Models\TextContent::find(11)->title; }}
                     </h4>
-                    <p>{{ App\Models\textContent::find(11)->text; }}
+                    <p>{{ App\Models\TextContent::find(11)->text; }}
 
                     </p>
                 </div>
@@ -76,9 +76,9 @@
             <div class="col-md-4 mb-5 d-flex align-items-center justify-content-center">
                 <i class="fas fa-tools why-choose-icons me-3"></i>
                 <div>
-                    <h4 class="mb-3 fw-bold">{{ App\Models\textContent::find(12)->title; }}
+                    <h4 class="mb-3 fw-bold">{{ App\Models\TextContent::find(12)->title; }}
                     </h4>
-                    <p>{{ App\Models\textContent::find(12)->text; }}
+                    <p>{{ App\Models\TextContent::find(12)->text; }}
 
                     </p>
                 </div>
@@ -86,9 +86,9 @@
             <div class="col-md-4 mb-5 d-flex align-items-center justify-content-center">
                 <i class="fas fa-trophy why-choose-icons me-3"></i>
                 <div>
-                    <h4 class="mb-3 fw-bold">{{ App\Models\textContent::find(13)->title; }}
+                    <h4 class="mb-3 fw-bold">{{ App\Models\TextContent::find(13)->title; }}
                     </h4>
-                    <p>{{ App\Models\textContent::find(13)->text; }}
+                    <p>{{ App\Models\TextContent::find(13)->text; }}
 
                     </p>
                 </div>
@@ -96,9 +96,9 @@
             <div class="col-md-4 mb-5 d-flex align-items-center justify-content-center">
                 <i class="far fa-file-alt why-choose-icons me-3"></i>
                 <div>
-                    <h4 class="mb-3 fw-bold">{{ App\Models\textContent::find(14)->title; }}
+                    <h4 class="mb-3 fw-bold">{{ App\Models\TextContent::find(14)->title; }}
                     </h4>
-                    <p>{{ App\Models\textContent::find(14)->text; }}
+                    <p>{{ App\Models\TextContent::find(14)->text; }}
 
                     </p>
                 </div>
@@ -106,9 +106,9 @@
             <div class="col-md-4 mb-5 d-flex align-items-center justify-content-center">
                 <i class="far fa-clock why-choose-icons me-3"></i>
                 <div>
-                    <h4 class="mb-3 fw-bold">{{ App\Models\textContent::find(15)->title; }}
+                    <h4 class="mb-3 fw-bold">{{ App\Models\TextContent::find(15)->title; }}
                     </h4>
-                    <p>{{ App\Models\textContent::find(15)->text; }}
+                    <p>{{ App\Models\TextContent::find(15)->text; }}
 
                     </p>
                 </div>
@@ -129,24 +129,24 @@
             <div class=" imagine-card   col-lg-3 d-flex align-items-center  ">
                 <i class="fa fa-user imagine-icon me-3"></i>
                 <div>
-                    <h5>{{ App\Models\textContent::find(16)->title; }}</h5>
-                    <p>{{ App\Models\textContent::find(16)->text; }}</p>
+                    <h5>{{ App\Models\TextContent::find(16)->title; }}</h5>
+                    <p>{{ App\Models\TextContent::find(16)->text; }}</p>
                 </div>
             </div>
 
             <div class=" imagine-card  col-lg-3 d-flex align-items-center  ">
                 <i class="fa fa-cog imagine-icon me-3"></i>
                 <div>
-                    <h5>{{ App\Models\textContent::find(17)->title; }}</h5>
-                    <p>{{ App\Models\textContent::find(17)->text; }}</p>
+                    <h5>{{ App\Models\TextContent::find(17)->title; }}</h5>
+                    <p>{{ App\Models\TextContent::find(17)->text; }}</p>
                 </div>
             </div>
 
             <div class=" imagine-card col-lg-3  d-flex align-items-center ">
                 <i class="fa fa-clock-o imagine-icon me-3"></i>
                 <div>
-                    <h5>{{ App\Models\textContent::find(18)->title; }}</h5>
-                    <p>{{ App\Models\textContent::find(18)->text; }}</p>
+                    <h5>{{ App\Models\TextContent::find(18)->title; }}</h5>
+                    <p>{{ App\Models\TextContent::find(18)->text; }}</p>
                 </div>
             </div>
 

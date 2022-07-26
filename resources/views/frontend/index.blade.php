@@ -26,7 +26,7 @@
 
     <div class="carousel-inner">
         @php
-        $slide_item_01 = App\Models\mediaContent::find(1)->media;
+        $slide_item_01 = App\Models\MediaContent::find(1)->media;
         @endphp
         <div class="carousel-item carousel-item1 active"
             style="background: -o-linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('{{ asset('images/'.$slide_item_01) }}');
@@ -43,7 +43,7 @@
         </div>
 
         @php
-        $slide_item_02 = App\Models\mediaContent::find(2)->media;
+        $slide_item_02 = App\Models\MediaContent::find(2)->media;
         @endphp
         <div class="carousel-item carousel-item2"
             style="background: -o-linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('{{ asset('images/'.$slide_item_02) }}');
@@ -61,7 +61,7 @@
         </div>
 
         @php
-        $slide_item_03 = App\Models\mediaContent::find(3)->media;
+        $slide_item_03 = App\Models\MediaContent::find(3)->media;
         @endphp
         <div class="carousel-item carousel-item3"
             style="background: -o-linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('{{ asset('images/'.$slide_item_03) }}');
@@ -135,7 +135,7 @@
     <div class="service-row construction-content pt-4 pb-4">
         <div class="service-row-img">
             @php
-            $service_01_img = App\Models\mediaContent::find(4)->media;
+            $service_01_img = App\Models\MediaContent::find(4)->media;
             @endphp
             <img loading="lazy" src="{{ asset('images/'.$service_01_img) }}" alt="">
         </div>
@@ -144,7 +144,7 @@
             <h2>Construction</h2>
 
             <p>
-                {{ App\Models\textContent::find(1)->text; }}
+                {{ App\Models\TextContent::find(1)->text; }}
 
             </p>
             <p class="learn-more-btn"><a href="{{route('front-cons')}}">Learn more</a></p>
@@ -160,14 +160,14 @@
     <div class="service-row interior-content pt-4 pb-4">
         <div class="service-row-img">
             @php
-            $service_02_img = App\Models\mediaContent::find(5)->media;
+            $service_02_img = App\Models\MediaContent::find(5)->media;
             @endphp
             <img loading="lazy" src="{{ asset('images/'.$service_02_img) }}" alt="">
         </div>
 
         <div class="service-row-text interior-text">
             <h2>Interiors</h2>
-            <p> {{ App\Models\textContent::find(2)->text; }}</p>
+            <p> {{ App\Models\TextContent::find(2)->text; }}</p>
             <p class="learn-more-btn"><a href="{{route('front-interior')}}">Learn more</a></p>
         </div>
     </div>
@@ -196,7 +196,7 @@
                     <div class="card w-100  pt-4 ps-2">
                         <div class="card-body">
                             <h3 class="mb-md-5 fw-bold card-title"><span>P</span>EOPLE<h3>
-                                    <p class="card-text"> {{ App\Models\textContent::find(3)->text; }}</p>
+                                    <p class="card-text"> {{ App\Models\TextContent::find(3)->text; }}</p>
                         </div>
 
                     </div>
@@ -205,7 +205,7 @@
                     <div class="card w-100  pt-md-4 ps-2">
                         <div class="card-body">
                             <h3 class="mb-md-5 fw-bold card-title"><span>I</span>NTEGRITY<h3>
-                                    <p class="card-text"> {{ App\Models\textContent::find(4)->text; }}</p>
+                                    <p class="card-text"> {{ App\Models\TextContent::find(4)->text; }}</p>
                         </div>
 
                     </div>
@@ -214,7 +214,7 @@
                     <div class="card w-100  pt-md-4 ps-2">
                         <div class="card-body">
                             <h3 class="mb-5 fw-bold card-title"><span>E</span>XCELLENCE<h3>
-                                    <p class="card-text"> {{ App\Models\textContent::find(5)->text; }}</p>
+                                    <p class="card-text"> {{ App\Models\TextContent::find(5)->text; }}</p>
                         </div>
 
                     </div>

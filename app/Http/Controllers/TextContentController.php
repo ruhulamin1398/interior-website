@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoretextContentRequest;
 use App\Http\Requests\UpdatetextContentRequest;
-use App\Models\textContent;
+use App\Models\TextContent;
 use Illuminate\Http\Request;
 
 class TextContentController extends Controller
