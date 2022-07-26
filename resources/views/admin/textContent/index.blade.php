@@ -13,10 +13,10 @@
 
     <form action="{{ route('text-contents.update',$item->id) }}" method="post">
         <h5 class="pb-2"><b>Title:</b></h5>
-        <input type="title" name="title" value="{{ $item->title }}" class="form-control">
+        <input type="title" name="title" value="{{ $item->title }}" required class="form-control">
         @method('put')
         @csrf
-        <textarea name="text" id="" cols="20" rows="10" class="form-control my-3">{{ $item->text }}</textarea>
+        <textarea name="text" id="" cols="20" rows="10" required class="form-control my-3">{{ $item->text }}</textarea>
         <button class="btn btn-info float-right">Update</button>
     </form>
     <br>

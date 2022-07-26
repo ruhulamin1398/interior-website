@@ -13,7 +13,7 @@
 
     <form action="{{ route('media-contents.update',$mediaContent->id) }}" method="post" enctype="multipart/form-data">
         <h5 class="pb-2"><b>Title:</b></h5>
-        <input type="title" name="title" value="{{ $mediaContent->title }}" class="form-control">
+        <input type="title" name="title" value="{{ $mediaContent->title }}" required class="form-control">
         @method('put')
         @csrf
         <div class="d-flex">
