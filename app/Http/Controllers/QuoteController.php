@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Mail\QuoteMail;
 use App\Models\Quote;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class QuoteController extends Controller
 {
@@ -23,23 +22,38 @@ class QuoteController extends Controller
             'phone' => ['required'],
         ]);
 
-        $quoteData = [
+        // $quoteData = [
 
-            'name' => $request->name,
-            'email' => $request->email,
-            'phone' => $request->phone,
-            'projecttype' => $request->projecttype,
-            'budget' => $request->budget,
-            'deadline' => $request->deadline,
-            'contact' => $request->contact,
-            'experience' => $request->experience,
-            'message' => $request->message,
+        //     'name' => $request->name,
+        //     'email' => $request->email,
+        //     'phone' => $request->phone,
+        //     'projecttype' => $request->projecttype,
+        //     'budget' => $request->budget,
+        //     'deadline' => $request->deadline,
+        //     'contact' => $request->contact,
+        //     'experience' => $request->experience,
+        //     'message' => $request->message,
 
-        ];
+        // ];
         // return $quoteData;
 
-        DB::table('quotes')->insert($quoteData);
+        // DB::table('quotes')->insert($quoteData);
+        $quote = new Quote();
+        $quote->name = $request->name;
+        $quote->email = $request->email;
+        $quote->phone = $request->phone;
+        $quote->projecttype = $request->projecttype;
+        $quote->budget = $request->budget;
+        $quote->deadline = $request->deadline;
+        $quote->contact = $request->contact;
+        $quote->experience = $request->experience;
+        $quote->message = $request->message;
 
-        return back()->with('success', 'Thanks For The Order We will Contact You Soon.');
+        if ($quote->save()) {
+            return back()->with('success', 'Thanks For The Order We will Contact You Soon.');
+        } else {
+            return "Faild";
+        }
+
     }
 }
