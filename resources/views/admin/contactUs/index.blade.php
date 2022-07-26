@@ -29,6 +29,10 @@
                     </h5>
                     <p><i class="fa-solid fa-quote-left"></i> {{ $contactUsItem->message }} <i
                             class="fa-solid fa-quote-right"></i> </p>
+
+                    <div class="">
+                        <h5 style="font-size: 16px; text-align: right;">Created: {{ $contactUsItem->created_at }} </h6>
+                    </div>
                 </div>
             </div>
             @endforeach

@@ -32,6 +32,9 @@
             <h6>Message</h6>
             <span style="font-size: 16px">" {{ $quote->message }} "</span>
         </div>
+        <div class="">
+            <h5 style="font-size: 16px; text-align: right;">Created: {{ $quote->created_at }} </h6>
+        </div>
 
     </div>
     @endforeach

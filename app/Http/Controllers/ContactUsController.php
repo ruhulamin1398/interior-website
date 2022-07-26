@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Mail\ContactUsMail;
 use App\Models\ContactUs;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class ContactUsController extends Controller
 {
@@ -30,9 +29,18 @@ class ContactUsController extends Controller
 
         ]);
 
-        DB::table('contact_us')->insert($validatedData);
+        // DB::table('contact_us')->insert($validatedData);
+        $contactData = new ContactUs();
+        $contactData->name = $request->name;
+        $contactData->email = $request->email;
+        $contactData->phone = $request->phone;
+        $contactData->message = $request->message;
 
-        return back()->with('success', 'Thanks For your Message We will Contact You Soon.');
+        if ($contactData->save()) {
+            return back()->with('success', 'Thanks For your Message We will Contact You Soon.');
+        } else {
+            return "Faild";
+        }
 
     }
 }
