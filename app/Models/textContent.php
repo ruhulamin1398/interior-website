@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class textContent extends Model
+class TextContent extends Model
 {
     use HasFactory;
 
@@ -14,5 +14,4 @@ class textContent extends Model
         'text',
     ];
 
-    
 }
