@@ -43,17 +43,17 @@
         <!-- topbar start -->
         <div class="topbar container-fluid d-flex flex-wrap justify-content-center justify-content-sm-between">
             <div class="info-content mt-2">
-                <p class="phone info-content">{{ App\Models\textContent::find(6)->text; }}</p>
+                <p class="phone info-content">{{ \App\Models\TextContent::find(6)->text; }}</p>
             </div>
 
 
             <div class="info-content mt-2">
-                <p class="email">{{ App\Models\textContent::find(7)->text; }}</p>
+                <p class="email">{{ \App\Models\TextContent::find(7)->text; }}</p>
 
             </div>
 
             <div class="location-topbar mt-2">
-                <p>{{ App\Models\textContent::find(8)->text; }}</p>
+                <p>{{ \App\Models\TextContent::find(8)->text; }}</p>
             </div>
         </div>
         <!-- topbar end -->
@@ -108,18 +108,18 @@
                         <div class="info-area">
                             <h6>Main office</h6>
                             <p>
-                                {{ App\Models\textContent::find(8)->text; }}
+                                {{ \App\Models\TextContent::find(8)->text; }}
                             </p>
                         </div>
 
                         <div class="info-area pt-3">
                             <h6>Phone</h6>
-                            <p> {{ App\Models\textContent::find(6)->text; }}</p>
+                            <p> {{ \App\Models\TextContent::find(6)->text; }}</p>
                         </div>
 
                         <div class="info-area pt-3">
                             <h6>Email</h6>
-                            <p> {{ App\Models\textContent::find(7)->text; }}</p>
+                            <p> {{ \App\Models\TextContent::find(7)->text; }}</p>
                         </div>
                     </div>
                 </div>

@@ -46,7 +46,7 @@ class TextContentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\textContent  $textContent
+     * @param  \App\Models\TextContent  $textContent
      * @return \Illuminate\Http\Response
      */
     public function show(textContent $textContent)
@@ -58,7 +58,7 @@ class TextContentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\textContent  $textContent
+     * @param  \App\Models\TextContent  $textContent
      * @return \Illuminate\Http\Response
      */
     public function edit(Request $request)
@@ -72,7 +72,7 @@ class TextContentController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \App\Http\Requests\UpdatetextContentRequest  $request
-     * @param  \App\Models\textContent  $textContent
+     * @param  \App\Models\TextContent  $textContent
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, textContent $textContent)
@@ -88,7 +88,7 @@ class TextContentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\textContent  $textContent
+     * @param  \App\Models\TextContent  $textContent
      * @return \Illuminate\Http\Response
      */
     public function destroy(textContent $textContent)
