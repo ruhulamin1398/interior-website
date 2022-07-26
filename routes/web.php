@@ -73,10 +73,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum', 'role:super-
     Route::post('/store/brand', [BrandController::class, 'AddBrand'])->name('store.brand');
     Route::post('/delete/brand/{id}', [BrandController::class, 'DeleteBrand']);
 
+    Route::resource('text-contents', TextContentController::class);
+    Route::resource('media-contents', MediaContentController::class);
+
+    Route::get('contactUs', [ContactUsController::class, 'indexBackend'])->name('contact.us.admin');
+    Route::get('quoteData', [QuoteController::class, 'index'])->name('quote.data');
+
 });
-
-Route::resource('text-contents', TextContentController::class);
-Route::resource('media-contents', MediaContentController::class);
-
-Route::get('contactUs', [ContactUsController::class, 'indexBackend'])->name('contact.us.admin');
-Route::get('quoteData', [QuoteController::class, 'index'])->name('quote.data');
