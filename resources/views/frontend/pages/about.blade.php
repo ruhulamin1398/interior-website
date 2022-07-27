@@ -122,7 +122,7 @@
 
     <div class="container pt-5">
         <div class="about-imagine  text-center ">
-            <h1>Get The<span> Imagine Interiors</span> Advantage</h1>
+            <h1>Get The<span> Karigor Interiors</span> Advantage</h1>
         </div>
 
         <div class="row mt-1 mb-5 justify-content-center m-3 ">
@@ -131,6 +131,7 @@
                 <div>
                     <h5>{{ App\Models\TextContent::find(16)->title; }}</h5>
                     <p>{{ App\Models\TextContent::find(16)->text; }}</p>
+
                 </div>
             </div>
 

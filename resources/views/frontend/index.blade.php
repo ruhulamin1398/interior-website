@@ -184,19 +184,24 @@
 
     <div class="container">
         <div class="section-title mb-md-5 pb-md-4">
-            <h1>Our<span> Core Values</span></h1>
+            <h1> Project<span> Video</span></h1>
         </div>
-
-
-
-
         <div class="row " data-aos="fade-up">
             <div class="card-group">
                 <div class="col-md-4 mb-md-4 core-values  p-2">
-                    <div class="card w-100  pt-4 ps-2">
+                    <div class="card w-100 ">
                         <div class="card-body">
-                            <h3 class="mb-md-5 fw-bold card-title"><span>P</span>EOPLE<h3>
-                                    <p class="card-text"> {{ App\Models\TextContent::find(3)->text; }}</p>
+                            {{-- <h3 class="mb-md-5 fw-bold card-title"><span>P</span>EOPLE<h3>
+                                    <p class="card-text"> {{ App\Models\TextContent::find(3)->text; }}</p> --}}
+                                    <iframe class="rounded" frameborder="0" scrolling="no" marginheight="0"
+                                        marginwidth="0" width="100%" height="100%" type="text/html"
+                                        src="https://www.youtube.com/embed/DBXH9jJRaDk?autoplay=1&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=http://youtubeembedcode.com">
+                                        <div><small><a href="https://youtubeembedcode.com/en">youtubeembedcode
+                                                    en</a></small></div>
+                                        <div><small><a
+                                                    href="https://xn--bstacasinonutansvensklicens-bkc.se/">Bästacasinonutansvensklicens.se</a></small>
+                                        </div>
+                                    </iframe>
                         </div>
 
                     </div>

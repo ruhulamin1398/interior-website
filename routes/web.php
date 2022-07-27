@@ -71,7 +71,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum', 'role:super-
     Route::get('/add/brands', [BrandController::class, 'AdminIndex'])->name('view.brand');
     Route::post('/store/brand', [BrandController::class, 'AddBrand'])->name('store.brand');
     Route::post('/store/brand', [BrandController::class, 'AddBrand'])->name('store.brand');
-    Route::post('/delete/brand/{id}', [BrandController::class, 'DeleteBrand']);
+    Route::post('/delete/brand/{id}', [BrandController::class, 'DeleteBrand'])->name('delete.brand');
 
     Route::resource('text-contents', TextContentController::class);
     Route::resource('media-contents', MediaContentController::class);

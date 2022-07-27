@@ -13,7 +13,8 @@
     <div class="card-inner ">
         <h5 class="card-title float-left mt-1 ">{{$projectTitle}}</h5>
 
-        <a href="{{route('project.index')}}" class="btn btn-primary float-right"><em class="icon ni ni-file-docs"></em><span class="ml-1">Manage Project Construction</span></a>
+        <a href="{{route('project.index')}}" class="btn btn-primary float-right"><em
+                class="icon ni ni-file-docs"></em><span class="ml-1">Manage Project Construction</span></a>
 
     </div>
 </div>
@@ -25,7 +26,8 @@
         <div class="row gy-4">
 
             <div class="col-lg-4">
-                <form action="{{ route('project-construction-image.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('project-construction-image.store') }}" method="POST"
+                    enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="projectid" value="{{$consProjectID}}">
 
@@ -35,7 +37,8 @@
                                 <label class="form-label" for="customMultipleFilesLabel">Upload Picture</label>
                                 <div class="form-control-wrap">
                                     <div class="custom-file">
-                                        <input type="file" multiple="" name="image[]" class="custom-file-input" id="customMultipleFiles">
+                                        <input type="file" multiple="" name="files[]" class="custom-file-input"
+                                            id="customMultipleFiles">
                                         <label class="custom-file-label" for="customMultipleFiles">Choose files</label>
 
                                         @if($errors->has('image'))
@@ -59,7 +62,8 @@
 
                         <div class="card card-preview">
                             <div class="card-inner">
-                                <table class="datatable-init nowrap nk-tb-list nk-tb-ulist" data-auto-responsive="false">
+                                <table class="datatable-init nowrap nk-tb-list nk-tb-ulist"
+                                    data-auto-responsive="false">
                                     <thead>
                                         <tr class="nk-tb-item nk-tb-head">
                                             <th class="nk-tb-col tb-col-mb"><span class="sub-text">Image</span></th>
@@ -73,17 +77,23 @@
 
                                         <tr class="nk-tb-item">
                                             <td class="nk-tb-col tb-col-md">
-                                                <img src="/project/picture/{{$details->image}}" alt="no image" class="img-thumbnail" style="height: 90px;width: 150px">
+                                                <img src="/project/picture/{{$details->image}}" alt="no image"
+                                                    class="img-thumbnail" style="height: 90px;width: 150px">
                                             </td>
 
                                             <td class="nk-tb-col nk-tb-col-tools">
                                                 <ul class="nk-tb-actions gx-1 float-left">
                                                     <li>
-                                                        <form action="{{ route('project-construction-image.destroy', $details->id) }}" method="post">
+                                                        <form
+                                                            action="{{ route('project-construction-image.destroy', $details->id) }}"
+                                                            method="post">
                                                             @csrf
                                                             @method('DELETE')
 
-                                                            <button type="submit" onclick="return confirm('Are you sure to delete !!');" class="btn btn-trigger btn-icon" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                            <button type="submit"
+                                                                onclick="return confirm('Are you sure to delete !!');"
+                                                                class="btn btn-trigger btn-icon" data-toggle="tooltip"
+                                                                data-placement="top" title="Delete">
                                                                 <em class="text-danger icon ni ni-trash"></em>
 
                                                             </button>
@@ -115,4 +125,3 @@
 
 
 @endsection
-
