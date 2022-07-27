@@ -14,7 +14,7 @@
     <div class="card-inner ">
         <h5 class="card-title float-left mt-1 ">Add Brand Image</h5>
 
-   
+
 
     </div>
 </div>
@@ -28,7 +28,7 @@
             <div class="col-lg-4">
                 <form action="{{ route('store.brand') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                
+
 
                     <div class="card card-bordered">
                         <div class="card-inner">
@@ -36,7 +36,8 @@
                                 <label class="form-label" for="customMultipleFilesLabel">Upload Picture</label>
                                 <div class="form-control-wrap">
                                     <div class="custom-file">
-                                        <input type="file" multiple="" name="image[]" class="custom-file-input" id="customMultipleFiles">
+                                        <input type="file" multiple="" name="image[]" class="custom-file-input"
+                                            id="customMultipleFiles">
                                         <label class="custom-file-label" for="customMultipleFiles">Choose files</label>
 
                                         @if($errors->has('image'))
@@ -60,7 +61,8 @@
 
                         <div class="card card-preview">
                             <div class="card-inner">
-                                <table class="datatable-init nowrap nk-tb-list nk-tb-ulist" data-auto-responsive="false">
+                                <table class="datatable-init nowrap nk-tb-list nk-tb-ulist"
+                                    data-auto-responsive="false">
                                     <thead>
                                         <tr class="nk-tb-item nk-tb-head">
                                             <th class="nk-tb-col tb-col-mb"><span class="sub-text">Image</span></th>
@@ -70,24 +72,29 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                      
 
-                                    @foreach($brandImages as $image )
-                                     
+
+                                        @foreach($brandImages as $image )
+
 
                                         <tr class="nk-tb-item">
                                             <td class="nk-tb-col tb-col-md">
-                                                <img src="/brand/picture/{{$image->image}}" alt="no image" class="img-thumbnail" style="height: 90px;width: 150px">
+                                                <img src="/brand/picture/{{$image->image}}" alt="no image"
+                                                    class="img-thumbnail" style="height: 90px;width: 150px">
                                             </td>
 
                                             <td class="nk-tb-col nk-tb-col-tools">
                                                 <ul class="nk-tb-actions gx-1 ">
                                                     <li>
-                                                        <form action="/delete/brand/{{$image->id}}" method="post">
+                                                        <form action="{{ route('delete.brand',$image->id) }}"
+                                                            method="post">
                                                             @csrf
-                                                           
 
-                                                            <button type="submit" onclick="return confirm('Are you sure to delete !!');" class="btn btn-trigger btn-icon" data-toggle="tooltip" data-placement="top" title="Delete">
+
+                                                            <button type="submit"
+                                                                onclick="return confirm('Are you sure to delete !!');"
+                                                                class="btn btn-trigger btn-icon" data-toggle="tooltip"
+                                                                data-placement="top" title="Delete">
                                                                 <em class="text-danger icon ni ni-trash"></em>
 
                                                             </button>
@@ -100,7 +107,7 @@
                                         </tr><!-- .nk-tb-item  -->
 
                                         @endforeach
-                                  
+
 
 
                                     </tbody>

@@ -12,33 +12,30 @@ class BrandController extends Controller
 
         $brandImages = Brand::get();
 
-        return view('admin.brands.index',compact('brandImages'));
+        return view('admin.brands.index', compact('brandImages'));
     }
 
-    public function FrontIndex(){
+    public function FrontIndex()
+    {
 
         $brandImages = Brand::get();
-        return view('frontend.pages.brands',compact('brandImages'));
+        return view('frontend.pages.brands', compact('brandImages'));
     }
-
-
-
 
     public function AddBrand(Request $request)
     {
 
         $this->validate($request, [
-            'image'    => 'required',
+            'image' => 'required',
 
         ], [
-            'image.required'     => 'Please Select Images',
+            'image.required' => 'Please Select Images',
 
         ]);
 
         $image = $request->file('image');
 
         foreach ($image as $images) {
-
 
             $file = $images;
             $extension = $file->getClientOriginalExtension();
@@ -52,11 +49,11 @@ class BrandController extends Controller
         return back()->with('success', 'Brand Images Uploaded Successfully');
     }
 
-
-    public function DeleteBrand($id){
+    public function DeleteBrand($id)
+    {
 
         Brand::find($id)->delete();
-        return back()->with('success','Deleted Succesfully');
-        
+        return back()->with('success', 'Deleted Succesfully');
+
     }
 }

@@ -15,9 +15,6 @@ class ProjectConstructionImageController extends Controller
      */
     public function index(Request $request)
     {
-
-        ;
-
         $consProjectID = $request->constructionid;
         $projectTitle = $request->title;
         $consImageList = ProjectImage::where('project_id',$consProjectID)->get();
