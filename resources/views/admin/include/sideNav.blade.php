@@ -83,6 +83,12 @@
                         </a>
                     </li><!-- .nk-menu-item -->
                     <li class="nk-menu-item">
+                        <a href="{{route('videos.index')}}" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-chat-circle-fill"></em></span>
+                            <span class="nk-menu-text">Video Content</span>
+                        </a>
+                    </li><!-- .nk-menu-item -->
+                    <li class="nk-menu-item">
                         <a href="{{route('quote.data')}}" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-bookmark-fill"></em></span>
                             <span class="nk-menu-text">Quote</span>

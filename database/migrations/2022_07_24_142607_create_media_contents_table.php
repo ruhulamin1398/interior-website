@@ -15,6 +15,7 @@ class CreateMediaContentsTable extends Migration
     {
         Schema::create('media_contents', function (Blueprint $table) {
             $table->id();
+            $table->integer('serial')->default(100);
             $table->string('title', 190);
             $table->string('media');
             $table->timestamps();

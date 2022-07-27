@@ -15,7 +15,10 @@ use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\ServiceConstructionController;
 use App\Http\Controllers\ServiceInteriorController;
 use App\Http\Controllers\TextContentController;
+use App\Http\Controllers\VideoController;
+use App\Http\Controllers\VideoFrontendController;
 use App\Models\Project;
+use App\Models\Video;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -27,7 +30,10 @@ Route::get('/', function () {
     $constructionProjects = Project::where('category_id', '2')->with('images')->orderBy('serial', 'asc')->get()->take(6);
     $allProjectsList = Project::with('images')->orderBy('serial', 'asc')->get()->take(6);
 
-    return view('frontend.index', compact('interiorProjects', 'constructionProjects', 'allProjectsList'));
+    $Videos = Video::orderBy('serial', 'asc')->get()->take(3);
+    // return $Videos
+
+    return view('frontend.index', compact('interiorProjects', 'constructionProjects', 'allProjectsList', 'Videos'));
 })->name('home-index');
 
 Route::get('/about-us', [AboutController::class, 'index'])->name('about-us');
@@ -39,6 +45,8 @@ Route::get('/project/gallery/{id}', [ProjectImageController::class, 'ViewGallery
 Route::get('/clients', [BrandController::class, 'FrontIndex'])->name('front.brand');
 Route::post('/contactus/mail', [ContactUsController::class, 'ContactUsmail'])->name('contact.us.mail');
 Route::post('/quote/mail', [QuoteController::class, 'Quotemail'])->name('quote.mail');
+
+Route::get('/video', [VideoFrontendController::class, 'index'])->name('video');
 
 //  ******** BACKEND ROUTES ************
 
@@ -78,5 +86,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum', 'role:super-
 
     Route::get('contactUs', [ContactUsController::class, 'indexBackend'])->name('contact.us.admin');
     Route::get('quoteData', [QuoteController::class, 'index'])->name('quote.data');
+
+    Route::resource('videos', VideoController::class);
 
 });
