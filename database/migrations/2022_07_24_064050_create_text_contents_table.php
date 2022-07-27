@@ -15,6 +15,7 @@ class CreateTextContentsTable extends Migration
     {
         Schema::create('text_contents', function (Blueprint $table) {
             $table->id();
+            $table->integer('serial')->default(100);
             $table->string('title',191);
             $table->longText('text');
             $table->timestamps();
