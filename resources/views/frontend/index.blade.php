@@ -30,7 +30,10 @@
         @endphp
         <div class="carousel-item carousel-item1 active"
             style="background: -o-linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('{{ asset('images/'.$slide_item_01) }}');
-        background: linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('{{ asset('images/'.$slide_item_01) }}');">
+        background: linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('{{ asset('images/'.$slide_item_01) }}');
+        background-repeat: no-repeat;
+background-size: cover;
+">
 
             <div class="carousel-caption d-block">
                 <h5 class="animate__animated animate__fadeInDown"
@@ -47,7 +50,10 @@
         @endphp
         <div class="carousel-item carousel-item2"
             style="background: -o-linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('{{ asset('images/'.$slide_item_02) }}');
-        background: linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('{{ asset('images/'.$slide_item_02) }}');">
+        background: linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('{{ asset('images/'.$slide_item_02) }}');
+        background-repeat: no-repeat;
+background-size: cover;
+">
 
             <div class="carousel-caption d-block">
                 <h5 class="animate__animated animate__fadeInDown"
@@ -65,7 +71,9 @@
         @endphp
         <div class="carousel-item carousel-item3"
             style="background: -o-linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('{{ asset('images/'.$slide_item_03) }}');
-        background: linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('{{ asset('images/'.$slide_item_03) }}');">
+        background: linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7)), url('{{ asset('images/'.$slide_item_03) }}');
+        background-repeat: no-repeat;
+background-size: cover;">
 
             <div class="carousel-caption d-block">
                 <h5 class="animate__animated animate__fadeInDown"
