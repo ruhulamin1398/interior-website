@@ -91,7 +91,7 @@
 
 
 
-                    <img src="{{assets('page.png')}}" alt="">
+                   <a href="https://web.facebook.com/karigorinterior.bd/?_rdc=1&_rdr" target="_blank" rel="noopener noreferrer"> <img src="{{asset('page.png')}}" alt=""></a>
 
 
                 </div>
